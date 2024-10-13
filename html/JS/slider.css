@@ -1,0 +1,94 @@
+/* Reset các padding và margin mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Slider Container */
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    height: 450px;
+    overflow: hidden;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+/* Slides Wrapper */
+.slides {
+    display: flex;
+    width: 400%; /* 4 slides (bao gồm bản sao của slide đầu tiên) */
+    height: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+/* Individual Slide */
+.slide {
+    width: 100%;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Thông Tin Slide */
+.info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.info h2 {
+    margin-bottom: 5px;
+}
+
+.info p {
+    font-size: 14px;
+}
+
+/* Nút điều khiển */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
