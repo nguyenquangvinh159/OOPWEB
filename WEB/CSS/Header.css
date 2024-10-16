@@ -1,0 +1,85 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+header.scrolled {
+    background-color: #333; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.header-left  li a:hover {
+    color: #009E60; 
+}
+.span {
+    color: #009E60;
+}
+nav ul {
+    margin-left: 10px;
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    margin-left: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul li a.highlight {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #f0f0f0;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+.header-right li a:hover {
+    color: #009E60; 
+}
+.search-bar {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+}
+.search-bar li a:hover {
+    color: #009E60; /* Màu thay đổi khi hover */
+}
+.icon-links a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.app-button, .vip-button {
+    padding: 5px 15px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.app-button {
+    background-color: #ff8c00;
+}
+
+.vip-button {
+    background-color: #e3b200;
+}
