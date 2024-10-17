@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iQIYI - Xem Phim Online</title>
+    <link rel="stylesheet" href="/CSS/Header.css">
+    <link rel="stylesheet" href="/CSS/List.css">
+    <link rel="stylesheet" href="/CSS/iQIYI.css">
+    <link rel="stylesheet" href="/CSS/Slide.css">
+    <link rel="stylesheet" href="/CSS/Footer.css">
+
+</head>
+<body>
+   
+    <header>
+        <div class="header-left">
+            <nav>
+                <ul> 
+                    <a style="margin-left: 40px;" href="dexuat.html"><img border="0" alf="logoiQIYI" src="/img/IQ.png" width="90px" height="30px"></a>
+                    <li><a href="#">Đề xuất</a></li>
+                    <li><a href="#">Phim Bộ</a></li>
+                    <li><a href="#">Phim Hàn</a></li>
+                    <li><a href="#">Phim Lẻ</a></li>
+                    <li><a href="#" class="highlight">Hoạt Hình </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right">
+            <input type="text" class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="icon-links">
+                <a href="#">Lịch sử xem</a> 
+                <a href="#">Ngôn ngữ</a>
+                <a href="#">Của tôi</a>
+            </div>
+            <button class="app-button">APP</button>
+            <button class="vip-button">VIP</button>
+        </div>
+    </header>
+    <!-- Header kết thúc -->
+    <div class="slider">
+        <div class="slides">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <img src="" alt="Movie 1">
+                <div class="info">
+                    <h2>Movie 1</h2>
+                    <p>Description of movie 1</p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="" alt="Movie 2">
+                <div class="info">
+                    <h2>Movie 2</h2>
+                    <p>Description of movie 2</p>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="" alt="Movie 3">
+                <div class="info">
+                    <h2>Movie 3</h2>
+                    <p>Description of movie 3</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="" alt="Movie 1">
+                <div class="info">
+                    <h2>Movie 1</h2>
+                    <p>Description of movie 1</p>
+                </div>
+            </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+  <!-- Nội dung phim bắt đầu -->
+  <h2> Đề Xuất Hot</h2>
+  <section class="movie-list">
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/one punch man 2.jpg')" onmouseleave="resetImage(this, '../img/one punch man.png')">
+         <a href="https://www.iq.com/album/one-punch-man-2015-2ekpp4jtbwt?lang=vi_vn">
+            <img src="../img/one punch man.png" alt="One Punch Man">
+            <div class="movie-details">
+                <p class="movie-title" > One Punch Man</p>
+                <p class="movie-rating">⭐ 9.4</p>
+                <p class="movie-year">Năm phát hành: 2015</p>
+                <p class="movie-genre">Thể loại: viễn tưởng, nhiệt huyết, hài hước </p>
+                <p class="movie-synopsis">
+                    Giới thiệu: One-Punch Man ( Nhật :ワンパンマン, Hepburn : Wanpanman ) là một bộ truyện tranh siêu anh hùng Nhật Bản do One sáng tác . Bộ truyện kể về Saitama , một siêu anh hùng độc lập , vì anh có thể đánh bại bất kỳ đối thủ nào chỉ bằng một cú đấm do đã rèn luyện bản thân đến trạng thái đỉnh cao, nên anh trở nên chán nản vì thiếu thử thách, bắt đầu tìm kiếm những đối thủ mạnh mẽ, đồng thời kết đồng minh với những anh hùng khác.
+                </p>
+                <a href="https://www.iq.com/album/one-punch-man-2015-2ekpp4jtbwt?lang=vi_vn" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/one-punch-man-2015-2ekpp4jtbwt?lang=vi_vn">One Punch Man</a>
+    </div>
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/ngocrong2.jpg')" onmouseleave="resetImage(this, '../img/ngocrong.png')">
+        <a href="https://www.iq.com/album/bay-vien-ngoc-rong-sieu-cap-2015-1hyuc6mul85?lang=vi_vn" >
+        <img src="/img/ngocrong.png" alt="7 Viên Ngọc Rồng">
+            <div class="movie-details">
+                <p class="movie-title" >Bảy Viên Ngọc Rồng Siêu Cấp</p>
+                <p class="movie-rating">⭐ 9.4</p>
+                <p class="movie-year">Năm phát hành: 2015</p>
+                <p class="movie-genre">Thể loại: Nhập Bản, Tiếng Nhật, Hài Hước, Nhiệt Huyết</p>
+                <p class="movie-synopsis">
+                    Giới thiệu: Sau khi kết thúc trận chiến khốc liệt với Majin Buu, trái đất trở lại hòa bình, Son Goku và người nhà sống một cuộc sống bình yên vô lo. Nhưng lúc này, ở sâu trong vũ trụ xa xôi, Beerus - một vị thần đáng sợ nhất thiên chức. Beerus là...
+                </p>
+                <a href="https://www.iq.com/album/bay-vien-ngoc-rong-sieu-cap-2015-1hyuc6mul85?lang=vi_vn" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/bay-vien-ngoc-rong-sieu-cap-2015-1hyuc6mul85?lang=vi_vn">7 Viên Ngọc Rồng Siêu Cấp</a>
+    </div>
+    
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/one piece 2.png')" onmouseleave="resetImage(this, '../img/one piece.png')">   
+        <a href="https://www.iq.com/album/one-piece-dao-hai-tac-1999-1bk9icvr331?lang=vi_vn">
+            <img src="../img//one piece.png" alt="One Piece">
+            <div class="movie-details">
+                <p class="movie-title" > One Piece</p>
+                <p class="movie-rating">⭐ 9.4 </p>
+                <p class="movie-year">Năm phát hành: 1999 </p>
+                <p class="movie-genre">Thể loại: </p>
+                <p class="movie-synopsis">
+                    Giới thiệu: One Piece (Đảo Hải Tặc) cập nhật vietsub vào 15:00 chủ nhật hàng tuần. Gol D. Roger, vua hải tặc với khối tài sản khổng lồ đã bị xử tử, tiết lộ rằng tài sản cả cuộc đời của ông được cất giấu kỹ ở một vị trí nào đó dưới đáy đại dương. Sau này người ta đã gọi đó là Đại Kho Báu. Để giành được kho báu, mọi người đã đua nhau ra khơi để trở thành hải tặc và đã tạo ra một "Thời đại Hải tặc lớn". Vì muốn thực hiện những lời đã thỏa thuận với bạn bè, Monkey D. Luffy đã gặp gỡ nhiều đối tác cùng chí hướng trong cuộc hành trình đi tìm kho báu và cùng nhau bước vào "Con đường Vĩ đại"...
+                </p>
+                <a href="https://www.iq.com/album/one-piece-dao-hai-tac-1999-1bk9icvr331?lang=vi_vn" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/one-piece-dao-hai-tac-1999-1bk9icvr331?lang=vi_vn">One Piece</a>
+        </a>
+    </div>
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/còn ra thể thống gì nữa 2.jpg')" onmouseleave="resetImage(this, '../img/con ra the thong gi nua.png')">
+        <a href="#">
+            <img src="../img//con ra the thong gi nua.png" alt="Movie 4">
+            <div class="movie-details">
+                <p class="movie-title" > teen</p>
+                <p class="movie-rating">đánh giá </p>
+                <p class="movie-year">Năm phát hành: </p>
+                <p class="movie-genre">Thể loại: </p>
+                <p class="movie-synopsis">
+                    Giới thiệu: 
+                </p>
+                <a href="link phim" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+        </div>
+        <a class="name" href="link phim">tên phim</a>
+        </a>
+    </div>
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/đại chiến người khổng lồ 2.jpg')" onmouseleave="resetImage(this, '../img/dai chien nguoi khong lo.png')">  
+        <a href="">
+            <img src="../img//dai chien nguoi khong lo.png" alt="Movie 5">
+            <div class="movie-details">
+                <p class="movie-title" > teen</p>
+                <p class="movie-rating">đánh giá </p>
+                <p class="movie-year">Năm phát hành: </p>
+                <p class="movie-genre">Thể loại: </p>
+                <p class="movie-synopsis">
+                    Giới thiệu: 
+                </p>
+                <a href="link phim" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+        </div>
+        <a class="name" href="link phim">tên phim</a>
+        </a>
+    </div>
+  </section>
+  <h2>Trending Chinese Anime</h2>
+  <section class="movie-list">
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/còn ra thể thống gì nữa 2.jpg')" onmouseleave="resetImage(this, '../img/con ra the thong gi nua.png')">
+        <a href="">
+            <img src="../img//con ra the thong gi nua.png" alt="Còn Ra Thể Thống Gì Nữa?">
+            <div class="movie-details">
+                <p class="movie-title" > teen</p>
+                <p class="movie-rating">đánh giá </p>
+                <p class="movie-year">Năm phát hành: </p>
+                <p class="movie-genre">Thể loại: </p>
+                <p class="movie-synopsis">
+                    Giới thiệu: 
+                </p>
+                <a href="link phim" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+        </div>
+        <a class="name" href="link phim">tên phim</a>
+        </a>
+    </div>
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/thần võ thiên tôn 2.jpg')" onmouseleave="resetImage(this, '../img/than vo thien ton.png')">
+        <a href="">
+            <img src="../img//than vo thien ton.png" alt="Thần Võ Thiên Tôn">
+            <div class="movie-details">
+                <p class="movie-title" > teen</p>
+                <p class="movie-rating">đánh giá </p>
+                <p class="movie-year">Năm phát hành: </p>
+                <p class="movie-genre">Thể loại: </p>
+                <p class="movie-synopsis">
+                    Giới thiệu: 
+                </p>
+                <a href="link phim" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+        </div>
+        <a class="name" href="link phim">tên phim</a>
+        </a>
+    </div>
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/đại chúa tể 2.jpg')" onmouseleave="resetImage(this, '../img/dai chua te.png')">
+        <a href="">
+            <img src="../img//dai chua te.png" alt="Đại Chúa Tể">
+            <div class="movie-details">
+                <p class="movie-title" > teen</p>
+                <p class="movie-rating">đánh giá </p>
+                <p class="movie-year">Năm phát hành: </p>
+                <p class="movie-genre">Thể loại: </p>
+                <p class="movie-synopsis">
+                    Giới thiệu: 
+                </p>
+                <a href="link phim" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+        </div>
+        <a class="name" href="link phim">tên phim</a>
+        </a>
+    </div>
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/vạn giới chí tôn 2.png')" onmouseleave="resetImage(this, '../img/van gioi chi ton.png')"> 
+        <a href="">
+            <img src="../img//van gioi chi ton.png" alt="Vạn Giới Chí Tôn">
+            <div class="movie-details">
+                <p class="movie-title" > teen</p>
+                <p class="movie-rating">đánh giá </p>
+                <p class="movie-year">Năm phát hành: </p>
+                <p class="movie-genre">Thể loại: </p>
+                <p class="movie-synopsis">
+                    Giới thiệu: 
+                </p>
+                <a href="link phim" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+        </div>
+        <a class="name" href="link phim">tên phim</a>
+        </a>
+    </div>
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/vạn cổ thần thoại2.jpg')" onmouseleave="resetImage(this, '../img/van co than thoai.png')">
+        <a href="">
+            <img src="../img//van co than thoai.png" alt="Vạn Cổ Thần Thoại">
+            <div class="movie-details">
+                <p class="movie-title" > teen</p>
+                <p class="movie-rating">đánh giá </p>
+                <p class="movie-year">Năm phát hành: </p>
+                <p class="movie-genre">Thể loại: </p>
+                <p class="movie-synopsis">
+                    Giới thiệu: 
+                </p>
+                <a href="link phim" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+        </div>
+        <a class="name" href="link phim">tên phim</a>
+        </a>
+    </div>
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/gia đạo trung nhị 2.jpg')" onmouseleave="resetImage(this, '../img/gia dao trung nhi.png')">
+        <a href="">
+            <img src="../img//gia dao trung nhi.png" alt="Gia Đạo Trung Nhị">
+            <div class="movie-details">
+                <p class="movie-title" > teen</p>
+                <p class="movie-rating">đánh giá </p>
+                <p class="movie-year">Năm phát hành: </p>
+                <p class="movie-genre">Thể loại: </p>
+                <p class="movie-synopsis">
+                    Giới thiệu: 
+                </p>
+                <a href="link phim" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+        </div>
+        <a class="name" href="link phim">tên phim</a>
+        </a>
+    </div>
+    
+</section>
+
+
+  <!-- Footer bắt đầu -->
+  <footer>
+      <p>© 2024 iQIYI | Bản quyền thuộc về các chủ sở hữu hợp pháp.</p>
+  </footer>
+  
+  <!-- Footer kết thúc -->
+   <script src="/JS/Header.js"></script>
+   <script src="/JS/Slide.js"></script>
+   <script src="/JS/List.js"></script>
+</body>
+</html>
