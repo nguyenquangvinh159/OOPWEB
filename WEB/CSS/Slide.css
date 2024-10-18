@@ -1,14 +1,14 @@
 .slider {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 900px;
     overflow: hidden;
     cursor: pointer;
+    margin: auto;
 }
 .slides {
     display: flex;
-    width: 400%;
-    height: 100%;
+    width: 110%;
     transition: transform 1s ease-in-out;
 }
 .slide {
@@ -41,13 +41,13 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.1);
     border: none;
     color: #fff;
-    font-size: 30px;
+    font-size: 20px;
     padding: 10px;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 100%;
     user-select: none;
     transition: background-color 0.3s;
 }
