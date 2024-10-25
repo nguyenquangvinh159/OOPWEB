@@ -1,4 +1,9 @@
-
+.movie{
+    position: relative;
+    width: 100%;
+    max-width: 1660px;
+    overflow: hidden;
+}
 section{
     margin: 10px;
 }
@@ -9,7 +14,7 @@ section{
 .movie-list {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 20px;
     padding-left: 40px;
     padding-top: 20px;
@@ -19,14 +24,14 @@ section{
     transform: scale(1.2);
 }
 .movie-item  {
+    position: relative;
     width: 200px; 
-    border-radius: 10px;
-   
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .movie-item img {
     width: 100%;
-    
 }
 
 .movie-item a {
@@ -36,7 +41,7 @@ section{
 }
 .movie-title, .movie-year, .movie-rating, .movie-genre, .movie-synopsis{
     color: white;
-    font-size: 7px;
+    font-size: 10px;
 }
 
 #infor:hover{
@@ -58,7 +63,7 @@ section{
 .movie-details{
     width: 170px;
     margin-top: -11.5px;
-    
+    cursor: pointer;
 }
 .movie-details p{
     padding-left: 5px;
@@ -87,5 +92,53 @@ h2{
     overflow: hidden; /* full thì thành ...*/
 }
 
+.overlay-content {
+    position: absolute;
+    top: 20%;
+    right: 0%;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content:flex-end;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 10px;
+    z-index: 1;
+}
 
+/* Khi hover vào ảnh, hiển thị nội dung */
+.movie-item:hover .overlay-content {
+    opacity: 1;
+}
 
+.movie-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn {
+    padding: 5px 5px;
+    border: none;
+    border-radius: 100%;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.watch-btn {
+    background-color: #009e60;
+    margin: 0 auto;
+}
+
+.watch-btn:hover {
+    background-color: #007b4a;
+    margin: 0 auto;
+}
+.collect-btn {
+    background-color:white;
+}
+
+.collect-btn:hover {
+    background-color: white;
+}
