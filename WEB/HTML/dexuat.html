@@ -4,16 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/CSS/iQIYI.css">
     <link rel="stylesheet" href="/CSS/Header.css">
+    <link rel="stylesheet" href="/CSS/Slide.css">
+    <link rel="stylesheet" href="/CSS/List.css">
+    <link rel="stylesheet" href="/CSS/Footer.css">
 </head>
 <body>
+    <div id="loginForm">
+        <h3>Đăng Nhập</h3>
+        <label for="username">Tài khoản:</label>
+        <input type="text" id="username" placeholder="Nhập tài khoản"><br><br>
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" placeholder="Nhập mật khẩu"><br><br>
+        <button id="submitLogin">Xác nhận</button>
+        <button id="cancelLogin">Hủy</button>
+    </div>
     <header id="header">
         <div class="header-left">
             <nav>
                 <ul>
-                    <a style="margin-left: 40px;" href="dexuat.html"><img border="0" alf="logoiQIYI" src="/IMG/IQ.png" width="90px" height="30px"></a>
-                    <li><a href="dexuat.html" class="highlight" >Đề xuất</a></li>
+                    <a style="margin-left: 40px;" href="Dexuat.html"><img border="0" alf="logoiQIYI" src="/img/IQ.png" width="90px" height="30px"></a>
+                    <li><a href="Dexuat.html" class="highlight">Đề xuất</a></li>
                     <li><a href="Phimbo.html">Phim bộ</a></li>
                     <li><a href="Phimhan.html">Phim hàn</a></li>
                     <li><a href="Phimle.html">Phim lẻ</a></li>
@@ -22,16 +35,360 @@
             </nav>
         </div>
         <div class="header-right">
-            <input type="text" class="search-bar" placeholder="Tìm kiếm...">
+            <div class="search"><input type="text" class="search-bar" placeholder="Tìm kiếm...">|&#x1F50D;</div>
             <div class="icon-links">
-                <a href="#">Lịch sử xem</a>
-                <a href="#">Ngôn ngữ</a>
-                <a href="#">Của tôi</a>
+                <span id="history">Lịch sử xem</span>
+                <div id="info">
+                    <img src="/img/box.png">
+                    <p>Đăng nhập để quản lý lịch sử xem nội dung trên các thiết bị khác nhau.</p>
+                    <button id="login">đăng nhập</button>
+                </div>
+                <span id="language">Ngôn ngữ</span>
+                <div id="info">
+                    <p>Tiếng Việt</p>
+                    <p>Tiếng Anh</p>
+                    <p>Tiếng Trung</p>
+                </div>
+                <span id="mine">Của tôi</span>
+                <div id="info">Thông tin về hình ảnh!</div>
             </div>
             <button class="app-button">APP</button>
             <button class="vip-button">VIP</button>
         </div>
     </header>
+    <div class="slider">
+        <div class="slides">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <img src="/img/thatdatuyet.jpg" alt="Movie 1">
+                <div class="info">
+                    <h2>Movie 1</h2>
+                    <p>Description of movie 1</p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="/img/ninhannhumong.jpg" alt="Movie 2">
+                <div class="info">
+                    <h2>Movie 2</h2>
+                    <p>Description of movie 2</p>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="/img/khangkhangnhatthuong.jpg" alt="Movie 3">
+                <div class="info">
+                    <h2>Movie 3</h2>
+                    <p>Description of movie 3</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="/img/thatdatuyet.jpg" alt="Movie 1">
+                <div class="info">
+                    <h2>Movie 1</h2>
+                    <p>Description of movie 1</p>
+                </div>
+            </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+    <h2> Đề Xuất Hot</h2>
+    <div class="movie">
+    <section class="movie-list">
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/lienhoalau2.jpg')" onmouseleave="resetImage(this, '../img/lienhoalau1.jpg')">
+            <a href="https://www.iq.com/album/lien-hoa-lau-2023-hg4cefqzed?lang=vi_vn">
+                <img src="/img/lienhoalau1.jpg" alt="Liên hoa lâu">
+                <div class="overlay-content">
+                    <div class="movie-buttons">
+                        <a href="https://www.iq.com/album/lien-hoa-lau-2023-hg4cefqzed?lang=vi_vn" class="btn watch-btn"><img src="/img/xem.png"></a>
+                        <a href="#" class="btn collect-btn"><img src="/img/bosuutam.png"></a>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <p class="movie-title" > Liên hoa lâu</p>
+                    <p class="movie-rating">⭐ 9.8</p>
+                    <p class="movie-year">Năm phát hành: 2023</p>
+                    <p class="movie-synopsis">
+                        "Liên Hoa Lâu" là một bộ phim võ hiệp trinh thám do Quách Hổ và Nhậm Hải Đào đạo diễn, với sự tham gia của các diễn viên Thành Nghị, Tăng Thuấn Hy, Tiêu Thuận Nghiêu. Bộ phim được chuyển thể từ tiểu thuyết " Liên Hoa Lầu Cát Tường" của Tùng Bình, kể về Lý Tương Di - Môn chủ Tứ Cố Môn nổi tiếng trong võ lâm, sau một trận chiến lớn bị thương nặng và từ đó lui về làm một lang trung không thèm quan tâm danh vọng. Trong cuộc gặp gỡ người bạn mới Phương Đa Bệnh và Địch Phi Thanh - kẻ thù cũ, Tương Di quyết định trở lại giang hồ một lần nữa. Mười năm trước, Lý Tương Di (do Thành Nghị thủ vai) - Chủ Môn phái Tứ Cố Môn, với thanh kiếm Tương Di Đại Kiếm vô song thiên hạ, trở thành ánh sáng của võ lâm chính đạo. Nhưng vì chiến hẹn Đông Hải với Địch Phi Thanh (Tiêu Thuận Nghiêu thủ vai) -Minh Chủ Kim Oanh Môn, hai cao thủ này biến mất khỏi giang hồ. Tứ Cố Môn và Kim Oanh Môn cũng dần dần biến mất khỏi giang hồ. Mười năm sau đó, Lý Liên Hoa (do Thành Nghị thủ vai) - một y sĩ lang thang trong làng, nhận được danh hiệu danh y. Ông không hề muốn tham gia giang hồ nhưng lại bị cuốn vào. Phương Đa Bệnh (do Tăng Thuấn Hy thủ vai) - thiếu gia nhiệt huyết với ước mơ công lý, nhận ra Lý Liên Hoa không đơn giản như vậy và quyết tìm ra bằng chứng về việc Lý Liên Hoa mạo danh danh y. Địch Phi Thanh, người luôn coi Lý Tương Di là đối thủ mạnh, sau khi trở lại giang hồ, không nhận ra Lý Tương Di. Sau một chuỗi vụ án, ba người họ đã xây dựng một tình bạn sâu sắc chỉ bằng mồm mép và trào phúng khi phá án. Lý Liên Hoa, ban đầu không quan tâm đến giang hồ, vì Địch Phi Thanh, cùng với sự lôi kéo của Phương Đa Bệnh, lại lần nữa thắp lên niềm đam mê nhiệt huyết. Ba người họ cùng nhau chiến đấu, phá giải những vụ án kỳ quái trong giang hồ, gìn giữ công lý và hòa bình thế giới. Bộ phim này sẽ được phát sóng trực tuyến trên iQIYI Quốc tế(iq.com).
+                    </p>
+                    <a href="https://www.iq.com/album/lien-hoa-lau-2023-hg4cefqzed?lang=vi_vn" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a> 
+                </div>
+                <a class="name" href="https://www.iq.com/album/lien-hoa-lau-2023-hg4cefqzed?lang=vi_vn">Liên hoa lâu</a>
+            </a>
+        </div>
+
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/jack2.jpg')" onmouseleave="resetImage(this, '../img/jack1.jpg')">
+            <a href="https://www.iq.com/album/thuyet-minh-jack-and-joker-nguoi-danh-cap-trai-tim-toi-2024-1dt8szg5j9x?lang=vi_vn" >
+                <img src="/img/jack1.jpg" alt="jack & joker">
+                <div class="overlay-content">
+                    <div class="movie-buttons">
+                        <a href="https://www.iq.com/album/thuyet-minh-jack-and-joker-nguoi-danh-cap-trai-tim-toi-2024-1dt8szg5j9x?lang=vi_vn" class="btn watch-btn"><img src="/img/xem.png"></a>
+                        <a href="#" class="btn collect-btn"><img src="/img/bosuutam.png"></a>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <p class="movie-title" >Jack & Joker</p>
+                    <p class="movie-rating">⭐ 9.9</p>
+                    <p class="movie-year">Năm phát hành: 2024</p>
+                    <p class="movie-synopsis">
+                        Số phận đưa hai chàng trai trẻ vào mối quan hệ yêu ghét lẫn nhau. Jack, một võ sĩ taekwondo dự bị 18 tuổi không có cơ hội trở thành một tuyển thủ lên đài, quyết định từ bỏ sự nghiệp không may mắn này. Vì phải kiếm tiền nuôi gia đình, anh đã vay tiền để mở một trung tâm phát triển thanh thiếu niên trong cộng đồng và cũng làm nghề thu nợ với vẻ ngoài hung dữ nhưng có một trái tim nhân hậu. Jack gặp Joker, một tên cướp với nghìn khuôn mặt, cải trang thành nhân viên ngân hàng để lừa gia đình của mình rằng anh ta có một cuộc sống thành đạt và giàu có. Anh chàng là một người đàn ông quyến rũ và sắc sảo nhưng thực chất không giỏi về bất cứ điều gì, vậy nên anh ta quyết định lừa mọi người từ ngày này qua ngày khác. Cho đến khi bị cuốn vào một tình huống phức tạp, từ cướp để sinh tồn nay trở thành trả thù và Jack và Joker hợp tác để chuẩn bị thực hiện một phi vụ lớn của cả hai!
+                    </p>
+                    <a href="https://www.iq.com/album/thuyet-minh-jack-and-joker-nguoi-danh-cap-trai-tim-toi-2024-1dt8szg5j9x?lang=vi_vn" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+            </div>
+            <a class="name" href="https://www.iq.com/album/thuyet-minh-jack-and-joker-nguoi-danh-cap-trai-tim-toi-2024-1dt8szg5j9x?lang=vi_vn">Jack & Jocker</a>
+            </a>
+        </div>
+        
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/listkhangkhangnhatthuong2.jpg')" onmouseleave="resetImage(this, '../img/listkhangkhangnhatthuong1.jpg')">   
+            <a href="https://www.iq.com/album/thuyet-minh-khanh-khanh-nhat-thuong-tan-xuyen-nhat-thuong-2024-28wf0r1e4r1?lang=vi_vn">
+                <img src="/img/listkhangkhangnhatthuong1.jpg" alt="khangkhangnhatthuong">
+                <div class="overlay-content">
+                    <div class="movie-buttons">
+                        <a href="https://www.iq.com/album/thuyet-minh-khanh-khanh-nhat-thuong-tan-xuyen-nhat-thuong-2024-28wf0r1e4r1?lang=vi_vn" class="btn watch-btn"><img src="/img/xem.png"></a>
+                        <a href="#" class="btn collect-btn"><img src="/img/bosuutam.png"></a>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <p class="movie-title" >Khang khang nhật thường</p>
+                    <p class="movie-rating">⭐ 9.8 </p>
+                    <p class="movie-year">Năm phát hành: 2024</p>
+                    <p class="movie-synopsis">
+                        Khanh Khanh Nhật Thường (Tân Xuyên Nhật Thường, New Life Begins) kể về câu chuyện của các cô gái đến từ trời nam đất bắc vì một mối liên hôn mà tề tựu tại Tân Xuyên. Lục thiếu gia ở Tân Xuyên là Doãn Tranh chỉ muốn cố gắng thi rớt, bất ngờ kết mối duyên với Lý Vi đang trải qua những ngày nhàn nhã ở quê nhà , cùng nhau mở ra một cuộc sống mới xảy ra đủ loại tình huống dở khóc dở cười. Theo Doãn Tranh khai phủ, thượng triều, hai người dần dần nảy xinh tình cảm, tâm ý tương thông, chung tay trải qua bốn mùa ba bữa, cùng trưởng thành với các sư huynh muội có tính cách vận mệnh khác nhau, cùng nhau viết nên cuộc sống thường ngày ấm áp ở đại gia đình Tân Xuyên.
+                    </p>
+                    <a href="https://www.iq.com/album/thuyet-minh-khanh-khanh-nhat-thuong-tan-xuyen-nhat-thuong-2024-28wf0r1e4r1?lang=vi_vn" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+                </div>
+                <a class="name" href="https://www.iq.com/album/thuyet-minh-khanh-khanh-nhat-thuong-tan-xuyen-nhat-thuong-2024-28wf0r1e4r1?lang=vi_vn">Khang khang nhật thường</a>
+            </a>
+        </div>
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/lovestick2.jpg')" onmouseleave="resetImage(this, '../img/lovestick1.jpg')">
+            <a href="https://www.iq.com/album/love-sick-2024-2024-t72xo8wib9?lang=vi_vn">
+                <img src="/img/lovestick1.jpg" alt="Love Sick 2024">
+                <div class="overlay-content">
+                    <div class="movie-buttons">
+                        <a href="https://www.iq.com/album/love-sick-2024-2024-t72xo8wib9?lang=vi_vn" class="btn watch-btn"><img src="/img/xem.png"></a>
+                        <a href="#" class="btn collect-btn"><img src="/img/bosuutam.png"></a>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <p class="movie-title" > Love Sick 2024</p>
+                    <p class="movie-rating">⭐ 9.8  </p>
+                    <p class="movie-year">Năm phát hành: 2024</p>
+                    <p class="movie-genre">Thể loại: Thái Lan, LGBT, Lãng mạng, Tình tiết, Phim hài, Tình bạn, Thanh xuan</p>
+                    <p class="movie-synopsis">
+                        Câu chuyện về một ngôi trường toàn nam tên là 'Friday College'. Pun, phó chủ tịch hội học sinh hoàn hảo, có bạn gái nhưng bố lại muốn cậuhẹn hò với con gái của bạn mình. Bố của Pun không thèm nghe Pun nói nhưng lại rất yêu quý cô em gái là Pang, người bị ám ảnh với tình yêu giữa các cậu trai. Trong khi đó, No, chủ tịch sôi nổi của câu lạc bộ âm nhạc đang cần ngân sách cao hơn cho câu lạc bộ của mình, nếu không cậu sẽ gặp rắc rối lớn. Pun biết mình có thể giúp No giải quyết vấn đề của mình nên đã đề nghị No trở thành bạn trai giả để đổi lấy sự giúp đỡ. Tuy nhiên, mối quan hệ giả vờ này sớm chuyển sang một điều gì đó hơn thế nữa khi No và Pun nảy sinh tình cảm với nhau.
+                    </p>
+                    <a href="https://www.iq.com/album/love-sick-2024-2024-t72xo8wib9?lang=vi_vn" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+            </div>
+            <a class="name" href="https://www.iq.com/album/love-sick-2024-2024-t72xo8wib9?lang=vi_vn">Love Sick 2024</a>
+            </a>
+        </div>
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/listthatdatuyet2.jpg')" onmouseleave="resetImage(this, '../img/listthatdatuyet1.jpg')">  
+            <a href="https://www.iq.com/album/that-da-tuyet-2024-1g4gcbj3ylh?lang=vi_vn">
+                <img src="/img/listthatdatuyet1.jpg" alt="Thất dạ tuyết ">
+                <div class="overlay-content">
+                    <div class="movie-buttons">
+                        <a href="https://www.iq.com/album/that-da-tuyet-2024-1g4gcbj3ylh?lang=vi_vn" class="btn watch-btn"><img src="/img/xem.png"></a>
+                        <a href="#" class="btn collect-btn"><img src="/img/bosuutam.png"></a>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <p class="movie-title" > Thất dạ tuyết</p>
+                    <p class="movie-rating">⭐ 9.7</p>
+                    <p class="movie-year">Năm phát hành: 2024 </p>
+                    <p class="movie-genre">Thể loại: Trung Quốc dại lục, Lãng mạng, Cổ trang, Tiếng phổ thông, Cổ đại</p>
+                    <p class="movie-synopsis">
+                        “Thất dạ tuyết” là một bộ phim võ hiệp cổ trang do đạo diễn Nhậm Hải Đào (đạo diễn của "Liên Hoa Lâu") và Lương Thắng Quyền (đạo diễn của "Hoa Thiên Cốt") đồng chấp bút, có sự tham gia của Lý Thấm (diễn viên chính của "Khánh Dư Niên Đệ Nhất Quý") và Tăng Thuấn Hy (diễn viên của "Liên Hoa Lâu"). Bộ phim được chuyển thể từ tiểu thuyết cùng tên của Thương Nguyệt. Trong câu chuyện, Hoắc Triển Bạch (do Tăng Thuấn Hy thủ vai), một kiếm khách tự do, để cứu mạng con trai của một người bạn, đã gặp Tiết Tử Dạ (do Lý Thấm thủ vai), một dược sư tài năng. Trong thời gian tám năm, họ đã sống chung và từ những tâm tư riêng biệt, đã dần dần hiểu biết và cảm thông lẫn nhau. Mối quan hệ của họ không chỉ là sự đồng lòng, mà còn là sự hiểu biết sâu sắc và thỏa thuận cùng nhau uống rượu dưới gốc cây mận vào năm tới. Nhưng do gánh vác những trách nhiệm riêng mà khó nói lên tình yêu, cuối cùng chỉ để lại niềm tiếc vĩnh cửu vì sự xa cách mãi mãi. Dưới cơn gió tuyết, họ đã uống rượu và chia sẻ niềm vui, nhưng rồi phải chia xa hàng nghìn dặm. Một cuộc gặp gỡ đầy xúc động, một nỗi nhớ khó quên, một tình yêu được định sẵn không thể ở bên nhau, tất cả tạo nên một câu chuyện tình bi kịch với sự chuộc lỗi và từ bỏ. Bộ phim sẽ được phát sóng trực tuyến trên trang iQ.com, nền đài quốc tế của iQiyi.
+                    </p>
+                    <a href="https://www.iq.com/album/that-da-tuyet-2024-1g4gcbj3ylh?lang=vi_vn" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+            </div>
+            <a class="name" href="https://www.iq.com/album/that-da-tuyet-2024-1g4gcbj3ylh?lang=vi_vn">Thất dạ tuyết</a>
+            </a>
+        </div>
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/moses2.jpg')" onmouseleave="resetImage(this, '../img/moses1.jpg')">  
+            <a href="https://www.iq.com/album/thuyet-minh-moses-cua-binh-nguyen-2023-1xdenzthwkt?lang=vi_vn">
+                <img src="/img//moses1.jpg" alt="Moses của bình nguyên ">
+                <div class="overlay-content">
+                    <div class="movie-buttons">
+                        <a href="https://www.iq.com/album/thuyet-minh-moses-cua-binh-nguyen-2023-1xdenzthwkt?lang=vi_vn" class="btn watch-btn"><img src="/img/xem.png"></a>
+                        <a href="#" class="btn collect-btn"><img src="/img/bosuutam.png"></a>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <p class="movie-title" > Moses của bình nguyên</p>
+                    <p class="movie-rating">⭐ 9.7</p>
+                    <p class="movie-year">Năm phát hành: 2023 </p>
+                    <p class="movie-genre">Thể loại: Trung Quốc dại lục, Tội phạm, Bí ẩn, Tiểu thuyết Chuyển thể</p>
+                    <p class="movie-synopsis">
+                        Khi vượt qua hai khoảng thời gian khác nhau, một vụ án giết người chưa có lời giải xuất hiện và phá hủy sự yên bình của thị trấn nhỏ.
+                    </p>
+                    <a href="https://www.iq.com/album/thuyet-minh-moses-cua-binh-nguyen-2023-1xdenzthwkt?lang=vi_vn" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+            </div>
+            <a class="name" href="https://www.iq.com/album/thuyet-minh-moses-cua-binh-nguyen-2023-1xdenzthwkt?lang=vi_vn">Moses của bình nguyên</a>
+            </a>
+        </div>
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/listthatdatuyet2.jpg')" onmouseleave="resetImage(this, '../img/listthatdatuyet1.jpg')">  
+            <a href="https://www.iq.com/album/that-da-tuyet-2024-1g4gcbj3ylh?lang=vi_vn">
+                <img src="/img/listthatdatuyet1.jpg" alt="Thất dạ tuyết ">
+                <div class="overlay-content">
+                    <div class="movie-buttons">
+                        <a href="https://www.iq.com/album/lien-hoa-lau-2023-hg4cefqzed?lang=vi_vn" class="btn watch-btn"><img src="/img/xem.png"></a>
+                        <a href="#" class="btn collect-btn"><img src="/img/bosuutam.png"></a>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <p class="movie-title" > Thất dạ tuyết</p>
+                    <p class="movie-rating">⭐ 9.7</p>
+                    <p class="movie-year">Năm phát hành: 2024 </p>
+                    <p class="movie-genre">Thể loại: Trung Quốc dại lục, Lãng mạng, Cổ trang, Tiếng phổ thông, Cổ đại</p>
+                    <p class="movie-synopsis">
+                        “Thất dạ tuyết” là một bộ phim võ hiệp cổ trang do đạo diễn Nhậm Hải Đào (đạo diễn của "Liên Hoa Lâu") và Lương Thắng Quyền (đạo diễn của "Hoa Thiên Cốt") đồng chấp bút, có sự tham gia của Lý Thấm (diễn viên chính của "Khánh Dư Niên Đệ Nhất Quý") và Tăng Thuấn Hy (diễn viên của "Liên Hoa Lâu"). Bộ phim được chuyển thể từ tiểu thuyết cùng tên của Thương Nguyệt. Trong câu chuyện, Hoắc Triển Bạch (do Tăng Thuấn Hy thủ vai), một kiếm khách tự do, để cứu mạng con trai của một người bạn, đã gặp Tiết Tử Dạ (do Lý Thấm thủ vai), một dược sư tài năng. Trong thời gian tám năm, họ đã sống chung và từ những tâm tư riêng biệt, đã dần dần hiểu biết và cảm thông lẫn nhau. Mối quan hệ của họ không chỉ là sự đồng lòng, mà còn là sự hiểu biết sâu sắc và thỏa thuận cùng nhau uống rượu dưới gốc cây mận vào năm tới. Nhưng do gánh vác những trách nhiệm riêng mà khó nói lên tình yêu, cuối cùng chỉ để lại niềm tiếc vĩnh cửu vì sự xa cách mãi mãi. Dưới cơn gió tuyết, họ đã uống rượu và chia sẻ niềm vui, nhưng rồi phải chia xa hàng nghìn dặm. Một cuộc gặp gỡ đầy xúc động, một nỗi nhớ khó quên, một tình yêu được định sẵn không thể ở bên nhau, tất cả tạo nên một câu chuyện tình bi kịch với sự chuộc lỗi và từ bỏ. Bộ phim sẽ được phát sóng trực tuyến trên trang iQ.com, nền đài quốc tế của iQiyi.
+                    </p>
+                    <a href="https://www.iq.com/album/that-da-tuyet-2024-1g4gcbj3ylh?lang=vi_vn" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+            </div>
+                <a class="name" href="https://www.iq.com/album/that-da-tuyet-2024-1g4gcbj3ylh?lang=vi_vn">Thất dạ tuyết</a>
+            </a>
+        </div>
+    </section>
+    </div>
+        <h2>Trending Chinese Anime</h2>
+    <section class="movie-list">
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/còn ra thể thống gì nữa 2.jpg')" onmouseleave="resetImage(this, '../img/con ra the thong gi nua.png')">
+            <a href="">
+                <img src="../img//con ra the thong gi nua.png" alt="Còn Ra Thể Thống Gì Nữa?">
+                <div class="movie-details">
+                    <p class="movie-title" > teen</p>
+                    <p class="movie-rating">đánh giá </p>
+                    <p class="movie-year">Năm phát hành: </p>
+                    <p class="movie-genre">Thể loại: </p>
+                    <p class="movie-synopsis">
+                        Giới thiệu: 
+                    </p>
+                    <a href="link phim" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+            </div>
+            <a class="name" href="link phim">tên phim</a>
+            </a>
+        </div>
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/thần võ thiên tôn 2.jpg')" onmouseleave="resetImage(this, '../img/than vo thien ton.png')">
+            <a href="">
+                <img src="../img//than vo thien ton.png" alt="Thần Võ Thiên Tôn">
+                <div class="movie-details">
+                    <p class="movie-title" > teen</p>
+                    <p class="movie-rating">đánh giá </p>
+                    <p class="movie-year">Năm phát hành: </p>
+                    <p class="movie-genre">Thể loại: </p>
+                    <p class="movie-synopsis">
+                        Giới thiệu: 
+                    </p>
+                    <a href="link phim" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+            </div>
+            <a class="name" href="link phim">tên phim</a>
+            </a>
+        </div>
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/đại chúa tể 2.jpg')" onmouseleave="resetImage(this, '../img/dai chua te.png')">
+            <a href="">
+                <img src="../img//dai chua te.png" alt="Đại Chúa Tể">
+                <div class="movie-details">
+                    <p class="movie-title" > teen</p>
+                    <p class="movie-rating">đánh giá </p>
+                    <p class="movie-year">Năm phát hành: </p>
+                    <p class="movie-genre">Thể loại: </p>
+                    <p class="movie-synopsis">
+                        Giới thiệu: 
+                    </p>
+                    <a href="link phim" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+            </div>
+            <a class="name" href="link phim">tên phim</a>
+            </a>
+        </div>
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/vạn giới chí tôn 2.png')" onmouseleave="resetImage(this, '../img/van gioi chi ton.png')"> 
+            <a href="">
+                <img src="../img//van gioi chi ton.png" alt="Vạn Giới Chí Tôn">
+                <div class="movie-details">
+                    <p class="movie-title" > teen</p>
+                    <p class="movie-rating">đánh giá </p>
+                    <p class="movie-year">Năm phát hành: </p>
+                    <p class="movie-genre">Thể loại: </p>
+                    <p class="movie-synopsis">
+                        Giới thiệu: 
+                    </p>
+                    <a href="link phim" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+            </div>
+            <a class="name" href="link phim">tên phim</a>
+            </a>
+        </div>
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/vạn cổ thần thoại2.jpg')" onmouseleave="resetImage(this, '../img/van co than thoai.png')">
+            <a href="">
+                <img src="../img//van co than thoai.png" alt="Vạn Cổ Thần Thoại">
+                <div class="movie-details">
+                    <p class="movie-title" > teen</p>
+                    <p class="movie-rating">đánh giá </p>
+                    <p class="movie-year">Năm phát hành: </p>
+                    <p class="movie-genre">Thể loại: </p>
+                    <p class="movie-synopsis">
+                        Giới thiệu: 
+                    </p>
+                    <a href="link phim" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+            </div>
+            <a class="name" href="link phim">tên phim</a>
+            </a>
+        </div>
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/gia đạo trung nhị 2.jpg')" onmouseleave="resetImage(this, '../img/gia dao trung nhi.png')">
+            <a href="">
+                <img src="../img//gia dao trung nhi.png" alt="Gia Đạo Trung Nhị">
+                <div class="movie-details">
+                    <p class="movie-title" > teen</p>
+                    <p class="movie-rating">đánh giá </p>
+                    <p class="movie-year">Năm phát hành: </p>
+                    <p class="movie-genre">Thể loại: </p>
+                    <p class="movie-synopsis">
+                        Giới thiệu: 
+                    </p>
+                    <a href="link phim" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a>
+            </div>
+            <a class="name" href="link phim">tên phim</a>
+            </a>
+        </div>
+    </section>
+    <footer id="myFooter">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Giới thiệu về chúng tôi</h3>
+            <ul>
+              <li><a href="https://www.iq.com/aboutus">Thông tin công ty</a></li>
+              <li><a href="https://www.iq.com/services-rights">Giới thiệu dịch vụ sản phẩm</a></li>
+              <li><a href="https://www.iq.com/download?lang=vi_vn">Cách xem</a></li>
+              <li><a href="https://ir.iqiyi.com/investor-overview?c=254698&p=irol-irhome">Quan hệ nhà đầu tư</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Hợp tác</h3>
+            <ul>
+              <li><a href="https://www.iq.com/intl-common/partnerShip.html">Đăng quảng cáo</a></li>
+              <li><a href="https://www.iq.com/intl-common/partnerShip.html">Quan hệ kinh doanh</a></li>
+              <li><a href="https://www.iq.com/intl-common/preinstall.html">Hợp tác cài đặt trước</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Hỗ trợ và giúp đỡ</h3>
+            <ul>
+              <li><a href="https://www.iq.com/intl-common/feedback.html?mod=vn&lang=vi_vn&entranceId=PCW/H5_navigation&agentType=426&ptid=01010031010021000000">Phản ánh ý kiến</a></li>
+              <li><a href="https://security.iqiyi.com/#oversea">Trung tâm phản hồi bảo mật</a></li>
+              <li><a href="https://intl-help.iq.com/m/?mod=vn&lang=vi_vn&entry=pc&entranceId=PCW/H5_navigation&agentType=426&ptid=01010031010021000000#_qy_scrollTop=0">Câu hỏi thường gặp</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Điều khoản dịch vụ</h3>
+            <ul>
+              <li><a href="https://www.iq.com/intl-common/international-privacyagreement.html?lang=vi_vn">Điều khoản quyền riêng tư</a></li>
+              <li><a href="https://www.iq.com/intl-common/international-useragreement.html?lang=vi_vn">Điều khoản sử dụng</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     <script src="/JS/Header.js"></script>
+    <script src="/JS/Slide.js"></script>
+    <script src="/JS/List.js"></script>
+    <script src="/JS/Footer.js"></script>
 </body>
 </html>
