@@ -1,0 +1,99 @@
+.movie{
+    position: relative;
+    width: 100%;
+    max-width: 1660px;
+    overflow: hidden;
+}
+section{
+    margin: 0 auto;
+}
+.name:hover {
+    color: #009E60;
+}
+
+.movie-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding-left: 40px;
+    padding-top: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.movie-item:hover {
+    transform: scale(1.2);
+}
+.movie-item  {
+    flex: 0 0 calc(100% / 6);
+    width: 100%; 
+    border-radius: 10px;
+   
+}
+
+.movie-item img {
+    width: 100%;
+    
+}
+
+.movie-item a {
+    font-size: 10px;
+    color: white;
+    text-decoration: none;
+}
+.movie-title, .movie-year, .movie-rating, .movie-genre, .movie-synopsis{
+    color: white;
+    font-size: 7px;
+}
+
+#infor:hover{
+    color: white;
+    font-size: 7px;
+    color: #009E60;
+    margin-left: 5px;
+}
+.movie-details {
+    display: none;
+    background-color:black;
+    
+}
+
+.movie-item:hover .movie-details {
+    display: block;
+    width: 100%;
+    
+}
+.movie-details{
+    width: 175px;
+    margin-top: -11.5px;
+    height: 100%;
+}
+.movie-details p{
+    padding-left: 5px;
+    margin-right: 5px;
+}
+h2{
+    color: white;
+}
+.movie-title{
+    padding-top: 10px;
+}
+.movie-title:hover{
+    color: #009E60;
+}
+.movie-info #info{
+    text-align: right;
+    padding-bottom: 20px;
+}
+.movie-synopsis{
+    width: 200px; 
+    padding-left: 5px;
+    margin-right: 5px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical; /* điều hướng cho nội dung theo chiều dọc*/
+    -webkit-line-clamp: 4; /* giới hạn số dòng */
+    overflow: hidden; /* full thì thành ...*/
+}
+
+
+
