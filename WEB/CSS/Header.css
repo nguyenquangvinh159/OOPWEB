@@ -12,7 +12,7 @@ header {
     z-index: 1000;
 }
 header.scrolled {
-    background-color: #333; 
+    background-color: black; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .header-left  li a:hover {
@@ -26,13 +26,17 @@ nav ul {
     list-style: none;
     display: flex;
 }
+span{
+    text-align: center;
+    margin: 0 auto;
+}
 
 nav ul li {
     margin-left: 10px;
     margin-right: 20px;
 }
 
-nav ul li a {
+nav ul li a{
     margin-left: 10px;
     color: white;
     text-decoration: none;
@@ -49,17 +53,29 @@ nav ul li a.highlight {
     display: flex;
     align-items: center;
 }
-.header-right li a:hover {
+.header-right span:hover {
     color: #009E60; 
 }
-.search-bar {
-    padding: 5px 10px;
+.search{
+    height: 40px;
+    width: 300px;
     border-radius: 5px;
     border: none;
     margin-right: 10px;
+    background-color: rgb(77, 77, 77);
+}
+.search-bar {
+    height: 40px;
+    width: 250px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+    color: rgb(200, 197, 197);
+    background-color: rgb(77, 77, 77);
 }
 .search-bar li a:hover {
-    color: #009E60; /* Màu thay đổi khi hover */
+    color: #009E60; 
 }
 .icon-links a {
     color: white;
@@ -83,4 +99,169 @@ nav ul li a.highlight {
 .vip-button {
     margin-right: 40px;
     background-color: #e3b200;
+}
+.history {
+    position: relative;
+    display: inline-block;
+}
+
+.history-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+.history-button:hover{
+    color: #009E60;
+}
+
+.popup-box {
+    position: absolute;
+    top: 100%; 
+    left: -100%;
+    background-color: rgb(26, 28, 34);
+    color: #fff;
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    display: none;
+    padding: 20px;
+    z-index: 10;
+    align-items: center;
+}
+
+.popup-icon {
+    display: block;
+    margin: 0 auto 10px;
+    width: 50px;
+    height: auto;
+}
+
+#login-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto 0;
+    font-size: 15px;
+}
+
+#login-button:hover {
+    background-color: #45a049;
+}
+
+.history:hover .popup-box {
+    display: block;
+}
+
+.Language {
+    position: relative;
+    display: inline-block;
+}
+
+.Language-button {
+    padding-left: 10px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+.Language-button:hover{
+    color: #009E60;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: -35%;
+    background-color: #222;
+    color: white;
+    width: 120px;
+    border-radius: 5px;
+    display: none;
+    z-index: 10;
+}
+
+.dropdown-item {
+    display: block;
+    justify-content: center;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+}
+
+.dropdown-item:hover {
+    background-color: #444;
+}
+
+.Language:hover .dropdown-menu {
+    display: block; 
+}
+.my {
+    position: relative;
+    display: inline-block;
+}
+
+.my-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.my-box {
+    position: absolute;
+    top: 100%; 
+    left: -90%;
+    background-color: #333;
+    color: #fff;
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    display: none;
+    padding: 20px;
+    z-index: 10;
+    align-items: center;
+}
+
+.my-button {
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto 0;
+    font-size: 13px;
+}
+
+.my-button:hover {
+    color: #45a049;
+}
+
+.my:hover .my-box {
+    display: block;
+}
+
+.icon-links{
+    cursor: pointer;
+}
+#loginForm {
+    display: none;
+    position: absolute; 
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 20; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
 }
