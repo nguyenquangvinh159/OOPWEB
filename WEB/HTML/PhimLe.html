@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iQIYI - Xem Phim Online</title>
+    <link rel="icon" type="image/x-icon" href="../img/logoIQIYI.ico">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../CSS/iQIYI.css">
+    <link rel="stylesheet" href="../CSS/Header.css">
+    <link rel="stylesheet" href="../CSS/Slide.css">
+    <link rel="stylesheet" href="../CSS/List.css">
+    <link rel="stylesheet" href="../CSS/BackTop.css">
+    <link rel="stylesheet" href="../CSS/Dieu Huong.css">
+    <link rel="stylesheet" href="../CSS/Footer.css">
+
+</head>
+<body>
+    <div id="loginForm">
+        <h1><strong>Đăng ký</strong></h1>
+        <p>Nhanh chóng và dễ dàng.</p>
+        <hr>
+        <div>
+           <input type="text" id="Name" placeholder="Họ" required size="45%">
+            <input type="text" id="Hoten" placeholder="Tên" required size="45%"><br>
+            <input type="text" id="Email" placeholder="Số điện thoại và Email" required size="95%"><br>
+            <input type="password" id="PassWord" placeholder="Mật Khẩu" required size="95%"><br>
+            <input type="password" id="XacNhanMatKhau" placeholder="Xác Nhận Mật Khẩu" required size="95%"><br>
+        </div><br>
+        <div>
+            <label for="">Ngày sinh &reg;</label><br>
+            <input type="number" id="date" min="1" max="31" placeholder="Ngày sinh" size="20px">
+            <input type="number" id="date" min="1" max="12" placeholder="Tháng sinh" size="20px">
+            <input type="number" id="date" min="1924" max="2024" placeholder="Năm sinh"size="20px">
+        </div><br>
+        <div>
+            <label for="gender"> Giới tính &reg;</label><br>
+            <label><input type="radio" name="gender" value="male">Nam</label>
+            <label><input type="radio" name="gender" value="female">Nữ</label>
+            <label><input type="radio" name="gender" value="other">Tùy chỉnh</label>
+        </div><br>
+        <p style="font-size: 80%;">Những người dùng dịch vụ của chúng tôi có thể đã tải thông tin liên hệ của bạn lên Facebook.<a href="#">Tìm hiểu thêm </a></p>
+        <p style="font-size: 80%;">Bằng cách nhấp vào Đăng ký, bạn đồng ý với <a href="#">Điều khoản</a>, <a href="#">Chính sách quyền riêng tư</a> và <a href="#">Chính sách cookie</a> của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ lúc nào </p>
+        <div style="text-align: center;">
+            <input id="submitLogin" type="button" style=" background-color: #009E60; color: white;" value="Đăng ký" onclick="CheckThongTin()">
+        </div>
+        <a href="#" style="color: #009E60;">Bạn đã có tài khoản ư?</a>
+</div>
+    <header id="header">
+        <div class="header-left">
+            <nav>
+                <ul>
+                    <a style="margin-left: 40px;" href="dexuat.html"><img border="0" alf="logoiQIYI" src="../img/IQ.png" width="90px" height="30px"></a>
+                    <li><a href="../HTML/Dexuat.html" class="highlight">Đề xuất</a></li>
+                    <li><a href="../HTML/Phimbo.html">Phim bộ</a></li>
+                    <li><a href="../HTML/Phimhan.html">Phim hàn</a></li>
+                    <li><a href="../HTML/PhimLe.html">Phim lẻ</a></li>
+                    <li><a href="../HTML/Hoathinh.html">Hoạt hình</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right">
+            </div><div class="search"><input type="text" class="search-bar" placeholder="Tìm kiếm...">|&#x1F50D;</div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="icon-links">
+                <div class="history">
+                    <button class="history-button">Lịch sử xem</button>
+                    <div class="popup-box">
+                        <img src="../img/box.png" class="popup-icon" /> 
+                        <p>Đăng nhập để quản lý lịch sử xem nội dung trên các thiết bị khác nhau.</p>
+                        <button id="login-button">Đăng nhập</button>
+                    </div>
+                </div>
+               <div class="Language">
+                    <button class="Language-button">Ngôn ngữ</button>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Tiếng Việt</a>
+                        <a href="#" class="dropdown-item">English</a>
+                        <a href="#" class="dropdown-item">日本語</a>
+                    </div>
+               </div>
+               <div class="my">
+                <button class="my-button">Của tôi</button>
+                    <div class="my-box">
+                        <p>Đăng nhập để theo dõi các nội dung mới nhất.</p>
+                        <button id="login-button">Đăng nhập</button>
+                    </div>
+                </div>
+            </div>
+            <button class="app-button">APP</button>
+            <button class="vip-button">VIP</button>
+        </div>
+    </header>
+    <!-- Header kết thúc -->
+    <div class="slider">
+        <div class="slides">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <img src="../Img_slide/Hôn Lễ Của Em.jpg" alt="Movie 1">
+                <div class="info">
+                    <h2>Hôn Lễ Của Em</h2>
+                    <p class="movie-rating">⭐9.8 </p>
+                <p class="movie-year">Năm phát hành: 2021 </p>
+                <p class="movie-genre">Thể loại: Lãng mạn, Tình Tiết, Thanh Xuân, Học Đường</p>
+                <p class="movie-synopsis">
+                    Bộ phim kể về câu chuyện tình yêu kéo dài 15 năm giữa Châu Tiêu Tề - một nam sinh có năng khiếu bơi lội, và Vưu Vịnh Từ - một nữ sinh chuyển trường. Trong thời gian học cấp 3, Châu Tiêu Tề ( Hứa Quang Hán đóng) gặp phải tình yêu sét đánh với Vưu Vịnh Từ ( Chương Nhược Nam đóng), tình yêu thời thanh xuân ngây thơ và thuần khiết, cậu không ngừng âm thầm bảo vệ cô, nhưng cô lại rời đi không từ mà biệt. Từ đó về sau, chính là một cuộc tình kéo dài tận 15 năm. Hôn lễ của em, cũng chính là lễ trưởng thành của anh.
+
+                </p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="../Img_slide/Tuyết Sơn Phi Hồ.jpg" alt="Movie 2">
+                <div class="info">
+                    <h2>Tuyết Sơn Phi Hồ: Kho Báu Phương Bắc</h2>
+                    <p class="movie-rating">⭐9.8 </p>
+                    <p class="movie-year">Năm phát hành: 2022 </p>
+                    <p class="movie-genre">Thể loại: Võ Thuật, Bí Ẩn, Hành Động</p>
+                    <p class="movie-synopsis">
+                        Mười năm trước, để chiếm lấy kho báu bí ẩn do vua Sấm để lại, Điền Quy Nông và thuộc hạ đã dàn dựng một trận chiến giết hại Hồ Nhất Đao và Miêu Nhân Phụng. Hồ Nhất Đao và Miêu Nhân Phụng chết thảm nhưng bản đồ kho báu lại biến mất. Sau 10 năm, bảo tàng tái hiện, chúng ác nhân tụ hội để tranh giành.
+                    </p>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="../Img_slide/Cửu Long Bích.jpg" alt="Movie 3">
+                <div class="info">
+                    <h2>Truyền Thuyết Nhân Long: Cửu Long Bích</h2>
+                    <p class="movie-rating">⭐9.8 </p>
+                    <p class="movie-year">Năm phát hành: 2021 </p>
+                    <p class="movie-genre">Thể loại: Tình Tiết, Cổ Trang, Hư Cấu</p>
+                    <p class="movie-synopsis">
+                        Từ xưa, dòng họ nuôi rồng luôn sống chết, chiến đấu kề vai sát cánh cùng rồng. Nhưng đến đời của Đổng Văn Quảng lại bất ngờ trở mặt thành thù với rồng, phong ấn chín vị Long vương vào Cửu Long Bích. Con trai ông là Đổng Nhất Minh để được cha công nhận, đã bất chấp sự ngăn cản của Đổng Văn Quảng, bí mật điều tra tung tích của Long châu. Tuy nhiên, anh phát hiện ra mọi người chỉ là quân cờ trên bàn cờ của kẻ đứng sau, và sự thật phía sau vẫn chưa phải là sự thật cuối cùng.
+
+                    </p>
+                </div>
+            </div>
+            
+            <div class="slide">
+                <img src="../Img_slide/Manh Chiến.jpg" alt="Movie 4">
+                <div class="info">
+                    <h2>Manh Chiến</h2>
+                    <p class="movie-rating">⭐9.8 </p>
+                    <p class="movie-year">Năm phát hành: 2024 </p>
+                    <p class="movie-genre">Thể loại: Tội Phạm, Hành Động, Hình Sự</p>
+                    <p class="movie-synopsis">
+                        Nội dung phim xoay quanh câu chuyện về cựu đội trưởng SWAT Đông Cốc (do An Chí Kiệt thủ vai) bị bọn côn đồ tấn công Đông Cốc trong quá trình làm việc không may bị thương và bị mù vĩnh viễn, và phải chịu trách nhiệm về việc nhiệm vụ bị thất bại. Dưới sự giúp đỡ và đồng hành của con gái, Đông Cốc dần vượt qua khó khăn và chấp nhận việc bản thân bị mù. Kẻ thù cũ của anh lại xuất hiện, con gái anh rơi vào nguy hiểm. Để cứu con gái, Đông Cốc bắt đầu cuộc chiến sinh tử với đôi mắt không thấy ánh sáng.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="../Img_slide/Hôn Lễ Của Em.jpg" alt="Movie 1">
+                <div class="info">
+                    <h2>Movie 1</h2>
+                    <p class="movie-rating">⭐9.8 </p>
+                <p class="movie-year">Năm phát hành: 2021 </p>
+                <p class="movie-genre">Thể loại: Lãng mạn, Tình Tiết, Thanh Xuân, Học Đường</p>
+                <p class="movie-synopsis">
+                    Bộ phim kể về câu chuyện tình yêu kéo dài 15 năm giữa Châu Tiêu Tề - một nam sinh có năng khiếu bơi lội, và Vưu Vịnh Từ - một nữ sinh chuyển trường. Trong thời gian học cấp 3, Châu Tiêu Tề ( Hứa Quang Hán đóng) gặp phải tình yêu sét đánh với Vưu Vịnh Từ ( Chương Nhược Nam đóng), tình yêu thời thanh xuân ngây thơ và thuần khiết, cậu không ngừng âm thầm bảo vệ cô, nhưng cô lại rời đi không từ mà biệt. Từ đó về sau, chính là một cuộc tình kéo dài tận 15 năm. Hôn lễ của em, cũng chính là lễ trưởng thành của anh.
+
+                </p>
+                </div>
+            </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+    <br>
+    <h2> Đề Xuất Hot</h2>
+<div class="movie">
+    <section class="movie-list">
+        <button class="prev-item">&#10094;</button> 
+    
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/hon le cua em 2.png')" onmouseleave="resetImage(this, '../img/hon le cua em.png')">
+        <a href="https://www.iq.com/album/hon-le-cua-em-2021-162m09tyw68?lang=vi_vn">
+            <img src="../img/hon le cua em.png" ></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/hon-le-cua-em-2021-162m09tyw68?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" > Hôn Lễ Của Em</p>
+                <p class="movie-rating">⭐9.8 </p>
+                <p class="movie-year">Năm phát hành: 2021 </p>
+                <p class="movie-genre">Thể loại: Lãng mạn, Tình Tiết, Thanh Xuân, Học Đường</p>
+                <p class="movie-synopsis">
+                    Bộ phim kể về câu chuyện tình yêu kéo dài 15 năm giữa Châu Tiêu Tề - một nam sinh có năng khiếu bơi lội, và Vưu Vịnh Từ - một nữ sinh chuyển trường. Trong thời gian học cấp 3, Châu Tiêu Tề ( Hứa Quang Hán đóng) gặp phải tình yêu sét đánh với Vưu Vịnh Từ ( Chương Nhược Nam đóng), tình yêu thời thanh xuân ngây thơ và thuần khiết, cậu không ngừng âm thầm bảo vệ cô, nhưng cô lại rời đi không từ mà biệt. Từ đó về sau, chính là một cuộc tình kéo dài tận 15 năm. Hôn lễ của em, cũng chính là lễ trưởng thành của anh.
+
+                </p>
+                <a href="https://www.iq.com/album/hon-le-cua-em-2021-162m09tyw68?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/hon-le-cua-em-2021-162m09tyw68?lang=vi_vn">Hôn Lễ Của Em</a>
+    </div>
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/the way of dragon 2.png')" onmouseleave="resetImage(this, '../img/the way of dragon.png')">
+        <a href="https://www.iq.com/album/the-way-of-the-dragon-1972-19rv6sm3js?lang=vi_vn">
+            <img src="../img/the way of dragon.png" ></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/the-way-of-the-dragon-1972-19rv6sm3js?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" > The Way Of Dragon </p>
+                <p class="movie-rating">⭐9.8 </p>
+                <p class="movie-year">Năm phát hành: 1972 </p>
+                <p class="movie-genre">Thể loại: Tội Phạm, Hành Động, Hài Hước, Kinh Dị</p>
+                <p class="movie-synopsis">
+                    A man visits his relatives at their restaurant in Italy and has to help them defend against brutal gangsters harassing them.
+                </p>
+                <a href="https://www.iq.com/album/the-way-of-the-dragon-1972-19rv6sm3js?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/the-way-of-the-dragon-1972-19rv6sm3js?lang=vi_vn">The Way Of Dragon</a>
+    </div>
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/nguoi tim dao 2.png')" onmouseleave="resetImage(this, '../img/nguoi tim dao.png')">
+        <a href="https://www.iq.com/album/nguoi-tim-dao-2024-1mnmoanpl98?lang=vi_vn">
+            <img src="../img/nguoi tim dao.png" ></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/nguoi-tim-dao-2024-1mnmoanpl98?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" >Người Tìm Đao </p>
+                <p class="movie-rating">⭐9.8 </p>
+                <p class="movie-year">Năm phát hành: 2024 </p>
+                <p class="movie-genre">Thể loại: Võ Thuật, Hành Động, Cổ Trang</p>
+                <p class="movie-synopsis">
+                    IP "Tróc Đao Nhân" được nâng cấp toàn diện! Tróc đao nhân "lang sói" Bùi Hưng (do Thích Tiểu Long thủ vai) nổi tiếng vì "đánh không chết". Ban đầu, anh ta là kẻ máu lạnh, vô cảm, dùng mạng sống để đổi lấy tiền bạc. Nhưng sau khi chứng kiến từng người bảo vệ chính nghĩa bị quyền lực đàn áp, tinh thần hiệp nghĩa trong anh dần được đánh thức. Anh quyết định ăn miếng trả miếng. Trên con đường trả thù, ngoài việc trừng trị những kẻ ác, anh còn phải đối đầu với nhiều Tróc đao nhân có võ công siêu phàm.
+
+                </p>
+                <a href="https://www.iq.com/album/nguoi-tim-dao-2024-1mnmoanpl98?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/nguoi-tim-dao-2024-1mnmoanpl98?lang=vi_vn">Người Tìm Đao</a>
+    </div>
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/ve si 2.png')" onmouseleave="resetImage(this, '../img/ve si.png')">
+        <a href="https://www.iq.com/album/ve-si-2024-nf91i87ssk?lang=vi_vn">
+            <img src="../img/ve si.png" ></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/ve-si-2024-nf91i87ssk?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" > Vệ Sỹ</p>
+                <p class="movie-rating">⭐9.8 </p>
+                <p class="movie-year">Năm phát hành: 2024  </p>
+                <p class="movie-genre">Thể loại: Tội Phạm, Hành Động, Tiểu Tiết</p>
+                <p class="movie-synopsis">
+                    Cựu nữ đặc cảnh Chung Hiểu Nam nhận nhiệm vụ bảo vệ Lâm Tử Hào, con trai của nhà khoa học gốc Hoa Lâm Hằng trở về nước. Những thành tựu nghiên cứu khoa học mà cha con nhà họ Lâm nắm giữ đã thu hút sự thèm muốn của các tài phiệt nước ngoài. Họ cấu kết với các tổ chức tội phạm để âm mưu bắt cóc Lâm Tử Hào nhằm đánh cắp dữ liệu cốt lõi. Chung Hiểu Nam đã hợp tác cùng cảnh sát người Hoa Peter, đối đầu với băng nhóm tội phạm qua nhiều cuộc chiến cam go, và cuối cùng đã phá vỡ âm mưu của đối thủ, thành công bảo vệ Lâm Tử Hào trở về an toàn.
+                </p>
+                <a href="https://www.iq.com/album/ve-si-2024-nf91i87ssk?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/ve-si-2024-nf91i87ssk?lang=vi_vn">Vệ Sỹ</a>
+    </div>
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/ma thoi den 2.png')" onmouseleave="resetImage(this, '../img/ma thoi den.png')">
+        <a href="https://www.iq.com/album/ma-thoi-den-nam-hai-quy-hu-2022-sf67f93na0?lang=vi_vn">
+            <img src="../img/ma thoi den.png" ></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/ma-thoi-den-nam-hai-quy-hu-2022-sf67f93na0?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" > Ma Thổi Đèn: Nam Hải Quy Hư</p>
+                <p class="movie-rating">⭐9.8 </p>
+                <p class="movie-year">Năm phát hành: 2022 </p>
+                <p class="movie-genre">Thể loại: Bí Ẩn, Tình Tiết, Kinh Dị</p>
+                <p class="movie-synopsis">
+                    Nam Hải Quy Khư là bộ phim đầu tiên kể về câu chuyện của nhóm đào mộ của đội trưởng Hồ Bát Nhất. Sau khi rửa tay gác kiếm, họ hỗ trợ người bạn của mình là chú Minh đi đến Biển Đông để trục vớt ngọc trai. Di tích của một quốc gia ngàn năm tuổi, họ đã trải qua biết bao gian khổ và nguy hiểm dưới đáy biển. Cuối cùng họ đoàn kết và hợp tác để đánh bại những con quái vật khổng lồ dưới biển sâu, cũng như tận dụng những thiết bị cơ quan có trong di tích để tìm đường sống sót.
+                </p>
+                <a href="https://www.iq.com/album/ma-thoi-den-nam-hai-quy-hu-2022-sf67f93na0?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/ma-thoi-den-nam-hai-quy-hu-2022-sf67f93na0?lang=vi_vn">Ma Thổi Đèn: Nam Hải Quy Hư</a>
+    </div>
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/my hau vuong 2.png')" onmouseleave="resetImage(this, '../img/my hau vuong.png')">
+        <a href="https://www.iq.com/album/that-gia-my-hau-vuong-dai-thanh-vo-song-2020-23aiunp7nfo?lang=vi_vn">
+            <img src="../img/my hau vuong.png" ></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/dai-chua-te-2023-123o36k0uo9?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" >Thật Giả Mỹ Hầu Vương: Đại Thánh Vô Song </p>
+                <p class="movie-rating">⭐9.8 </p>
+                <p class="movie-year">Năm phát hành: 2020 </p>
+                <p class="movie-genre">Thể loại: Hành Động, Cổ Trang, Hư Cấu </p>
+                <p class="movie-synopsis">
+                    Lục Nhĩ vì muốn cứu nữ yêu Tử Đằng bị Tôn Ngộ Không tổn thương, mà đồng ý với yêu vương, cải trang thành Tôn Ngộ Không, phá hủy kế hoạch đi thỉnh kinh của Đường Tăng. Vì để chứng minh thân phận, Lục Nhĩ và Tôn Ngộ Không quyết đấu nhiều lần, nhưng là thật hay giả, mọi người khó mà phân biệt. Dần dần, Lục Nhĩ cũng quên mất thân phận của mình, tin rằng mình chính là Tôn Ngộ Không, để chúng sinh an bình, cuối cùng Lục Nhĩ chọn cách kề vai chiến đấu cùng Tôn Ngộ Không, thậm chí không tiếc hy sinh chính mình...
+                </p>
+                <a href="https://www.iq.com/album/that-gia-my-hau-vuong-dai-thanh-vo-song-2020-23aiunp7nfo?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/that-gia-my-hau-vuong-dai-thanh-vo-song-2020-23aiunp7nfo?lang=vi_vn">Thật Giả Mỹ Hầu Vương: Đại Thánh Vô Song</a>
+    </div>
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/tien ly ky duyen 2.png')" onmouseleave="resetImage(this, '../img/tien ly ky duyen.png')">
+        <a href="https://www.iq.com/album/tay-du-ky-tien-ly-ky-duyen-1995-19rxto3d4w?lang=vi_vn">
+            <img src="../img/tien ly ky duyen.png" ></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/tay-du-ky-tien-ly-ky-duyen-1995-19rxto3d4w?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" > Tây Du Ký: Tiên Lý Kỳ Duyên</p>
+                <p class="movie-rating">⭐9.8 </p>
+                <p class="movie-year">Năm phát hành:  </p>
+                <p class="movie-genre">Thể loại: </p>
+                <p class="movie-synopsis">
+                    Giới thiệu: Bộ phim Hoa Ngữ kinh điển vang dội nhiều năm! Diễn xuất đặc sắc của Châu Tinh Trì, Chu Nhân, viết tiếp câu chuyện tình yêu kỳ diệu nhưng đầy trắc trở.
+                </p>
+                <a href="https://www.iq.com/album/tay-du-ky-tien-ly-ky-duyen-1995-19rxto3d4w?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/tay-du-ky-tien-ly-ky-duyen-1995-19rxto3d4w?lang=vi_vn">Tây Du Ký: Tiên Lý Kỳ Duyên</a>
+    </div>
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/diep van 2.png')" onmouseleave="resetImage(this, '../img/diep van.png')">
+        <a href="https://www.iq.com/album/diep-van-2-2010-2ffkwti1ew0?lang=vi_vn">
+            <img src="../img/diep van.png" ></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/dai-chua-te-2023-123o36k0uo9?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" > Diệp Vấn </p>
+                <p class="movie-rating">⭐9.8 </p>
+                <p class="movie-year">Năm phát hành: 2010  </p>
+                <p class="movie-genre">Thể loại: Hành Động, Võ Hiệp, Tình Tiết  </p>
+                <p class="movie-synopsis">
+                    Quán quân đấu quyền có biệt danh là Twister tới Trung Quốc. Trong buổi tỉ thí đã đánh bị thương võ sư Trung Quốc. Hồng Chấn Nam đứng ra khiêu chiến, máu nhuộm võ đài. Vì võ thuật Trung Quốc, Diệp Vấn chấp nhận lời khiêu chiến của Twister, chiến đấu vì đại nghĩa của dân tộc.
+
+                </p>
+                <a href="https://www.iq.com/album/diep-van-2-2010-2ffkwti1ew0?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/diep-van-2-2010-2ffkwti1ew0?lang=vi_vn">Diệp Vấn</a>
+    </div>
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/ho muoi 2.png')" onmouseleave="resetImage(this, '../img/ho muoi.png')">
+        <a href="https://www.iq.com/album/du-an-ho-muoi-2024-rcreg2jar8?lang=vi_vn">
+            <img src="../img/ho muoi.png" ></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/du-an-ho-muoi-2024-rcreg2jar8?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" > Dự Án Hồ Muối</p>
+                <p class="movie-rating">⭐9.8 </p>
+                <p class="movie-year">Năm phát hành: 2024 </p>
+                <p class="movie-genre">Thể loại: Tội Phạm, Phim Hài, Tình Tiết</p>
+                <p class="movie-synopsis">
+                    Một kẻ ngốc đi tìm người yêu mất tích, vô tình gặp phải một kẻ lưu manh lạc mất chính mình. Cùng với một chiếc xe tải cũ, họ bắt đầu một hành trình vừa đầy tiếng cười vừa thấm đẫm nước mắt. Những kẻ lừa đảo điên rồ, thương nhân lòng dạ đen tối, đối thủ tàn ác, tất cả đều phải vượt qua để cuối cùng họ tìm thấy sự cứu rỗi của chính mình. Tình yêu đôi khi không cần đến lời nói, dù có tan xương nát thịt, anh vẫn sẽ tìm được em. Trên con đường trở về đầy gian nan, sống chết có nhau.
+                </p>
+                <a href="https://www.iq.com/album/du-an-ho-muoi-2024-rcreg2jar8?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/du-an-ho-muoi-2024-rcreg2jar8?lang=vi_vn">Dự Án Hồ Muối</a>
+    </div>
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/nhom soi hanh dong 2.png')" onmouseleave="resetImage(this, '../img/nhom soi hanh dong.png')">
+        <a href="https://www.iq.com/album/nhom-soi-hanh-dong-2019-19rs1qbd2o?lang=vi_vn">
+            <img src="../img/nhom soi hanh dong.png" ></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/nhom-soi-hanh-dong-2019-19rs1qbd2o?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" > Nhóm Sói Hành Động </p>
+                <p class="movie-rating">⭐9.8 </p>
+                <p class="movie-year">Năm phát hành: 2021 </p>
+                <p class="movie-genre">Thể loại: Hành Động, Phiêu Lưu </p>
+                <p class="movie-synopsis">
+                    Tình nguyên viên điều trị Lí Dao ở một làng nọ của một đất nước Adoli giúp đỡ dân làng chữa bênh, Đột nhiên bị bang cướp tấn công trở thành con tim, Cha mẹ biết được tin tức liên hệ với Trương Chấn,Ngô Ưu và đội bảo an tới, chứ thoát thàng công Lí Dao nhưng vẫn có một số đồng bào bị giữ lại, Trở ngược lại và cướp lấy phương tiện giao thông đi lên phía cao tìm tin hiệu cấu cứu, Thành viên đội an bảo và bang cuớp có một cuộc vượt đuổi khốc liệt,Trương Chán ,Tuyết Hoa,Vũ Minh Tương liên tiếp hi sinh,Ngô Ưu bảo vệ Lí Dao cuối cùng cũng đợi được tiếp viện tới...
+                </p>
+                <a href="https://www.iq.com/album/nhom-soi-hanh-dong-2019-19rs1qbd2o?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/nhom-soi-hanh-dong-2019-19rs1qbd2o?lang=vi_vn">Nhóm Sói Hành Động</a>
+    </div>
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/lang mo 2.png')" onmouseleave="resetImage(this, '../img/lang mo.png')">
+        <a href="https://www.iq.com/album/lang-mo-that-lac-2024-1kwsnalud24?lang=vi_vn">
+            <img src="../img/lang mo.png" ></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/lang-mo-that-lac-2024-1kwsnalud24?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" > Lăng Mộ Thất Lạc</p>
+                <p class="movie-rating">⭐9.8 </p>
+                <p class="movie-year">Năm phát hành: 2024 </p>
+                <p class="movie-genre">Thể loại: Tình Tiết, Kinh Dị, Phiêu Lưu</p>
+                <p class="movie-synopsis">
+                    Dân gian lưu truyền rằng chỉ cần có được cuốn Ngự Giao Lục của Đại tư vu nước Nam Nguyệt là có thể nuôi rắn thành giao long, thuần phục giao long hóa thành rồng. Trong thời kỳ Dân Quốc, những kẻ trộm mộ từ nước ngoài ồ ạt đổ vào đất nước Hoa Hạ, cướp đoạt quốc bảo và phá hoại di tích. Một nhóm trong số họ phát hiện ra địa cung cất giấu cuốn Ngự Giao Lục và sau đó quyết định nhanh chóng tìm ra cuốn sách này rồi giấu đi.
+
+                </p>
+                <a href="https://www.iq.com/album/lang-mo-that-lac-2024-1kwsnalud24?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/lang-mo-that-lac-2024-1kwsnalud24?lang=vi_vn">Lăng Mộ Thất Lạc</a>
+    </div>
+
+        <button class="next-item">&#10095;</button>  
+    </section>
+</div>
+
+<h2>Kiếp Tây Du</h2>
+  
+<div class="movie">  
+    <section class="movie-list">
+        <button class="prev-item">&#10094;</button> 
+
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/my hau vuong 2.png')" onmouseleave="resetImage(this, '../img/my hau vuong.png')">
+            <a href="https://www.iq.com/album/that-gia-my-hau-vuong-dai-thanh-vo-song-2020-23aiunp7nfo?lang=vi_vn">
+                <img src="../img/my hau vuong.png" ></a>
+                <div class="overlay-content">
+                    <div class="movie-buttons">
+                        <a href="https://www.iq.com/album/dai-chua-te-2023-123o36k0uo9?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                        <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <p class="movie-title" >Thật Giả Mỹ Hầu Vương: Đại Thánh Vô Song </p>
+                    <p class="movie-rating">⭐9.8 </p>
+                    <p class="movie-year">Năm phát hành: 2020 </p>
+                    <p class="movie-genre">Thể loại: Hành Động, Cổ Trang, Hư Cấu </p>
+                    <p class="movie-synopsis">
+                        Lục Nhĩ vì muốn cứu nữ yêu Tử Đằng bị Tôn Ngộ Không tổn thương, mà đồng ý với yêu vương, cải trang thành Tôn Ngộ Không, phá hủy kế hoạch đi thỉnh kinh của Đường Tăng. Vì để chứng minh thân phận, Lục Nhĩ và Tôn Ngộ Không quyết đấu nhiều lần, nhưng là thật hay giả, mọi người khó mà phân biệt. Dần dần, Lục Nhĩ cũng quên mất thân phận của mình, tin rằng mình chính là Tôn Ngộ Không, để chúng sinh an bình, cuối cùng Lục Nhĩ chọn cách kề vai chiến đấu cùng Tôn Ngộ Không, thậm chí không tiếc hy sinh chính mình...
+                    </p>
+                    <a href="https://www.iq.com/album/that-gia-my-hau-vuong-dai-thanh-vo-song-2020-23aiunp7nfo?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+            </div>
+            <a class="name" href="https://www.iq.com/album/that-gia-my-hau-vuong-dai-thanh-vo-song-2020-23aiunp7nfo?lang=vi_vn">Thật Giả Mỹ Hầu Vương: Đại Thánh Vô Song</a>
+        </div>
+        
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/tien ly ky duyen 2.png')" onmouseleave="resetImage(this, '../img/tien ly ky duyen.png')">
+            <a href="https://www.iq.com/album/tay-du-ky-tien-ly-ky-duyen-1995-19rxto3d4w?lang=vi_vn">
+                <img src="../img/tien ly ky duyen.png" ></a>
+                <div class="overlay-content">
+                    <div class="movie-buttons">
+                        <a href="https://www.iq.com/album/tay-du-ky-tien-ly-ky-duyen-1995-19rxto3d4w?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                        <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <p class="movie-title" > Tây Du Ký: Tiên Lý Kỳ Duyên</p>
+                    <p class="movie-rating">⭐9.8 </p>
+                    <p class="movie-year">Năm phát hành:  </p>
+                    <p class="movie-genre">Thể loại: </p>
+                    <p class="movie-synopsis">
+                        Giới thiệu: Bộ phim Hoa Ngữ kinh điển vang dội nhiều năm! Diễn xuất đặc sắc của Châu Tinh Trì, Chu Nhân, viết tiếp câu chuyện tình yêu kỳ diệu nhưng đầy trắc trở.
+                    </p>
+                    <a href="https://www.iq.com/album/tay-du-ky-tien-ly-ky-duyen-1995-19rxto3d4w?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+            </div>
+            <a class="name" href="https://www.iq.com/album/tay-du-ky-tien-ly-ky-duyen-1995-19rxto3d4w?lang=vi_vn">Tây Du Ký: Tiên Lý Kỳ Duyên</a>
+        </div>
+
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/dai thanh 2.png')" onmouseleave="resetImage(this, '../img/dai thanh.png')">
+            <a href="https://www.iq.com/album/dai-thanh-2020-14qfil3ddes?lang=vi_vn">
+                <img src="../img/dai thanh.png" ></a>
+                <div class="overlay-content">
+                    <div class="movie-buttons">
+                        <a href="https://www.iq.com/album/dai-thanh-2020-14qfil3ddes?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                        <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <p class="movie-title" > Đại Thánh</p>
+                    <p class="movie-rating">⭐9.8 </p>
+                    <p class="movie-year">Năm phát hành: 2021 </p>
+                    <p class="movie-genre">Thể loại: Hư Cấu, Hành Động, Phiêu Lưu</p>
+                    <p class="movie-synopsis">
+                        Giới thiệu: Tôn Ngộ Không trúng phải quỷ kế của lão quái Hoàng Mi, bị giam giữ đồng thời mất toàn bộ pháp lực. Lão quái Hoàng Mi xây dựng một đội quân hùng mạnh, thiết lập Đấu trường sinh tử, dùng bùn đất tạo ra Lục Nhĩ Mỹ Hầu để thay thế cho Tôn Ngộ Không thật. Tôn Ngộ Không bị áp bức rơi vào tuyệt vọng. Một kẻ quen chiến đấu đơn độc bị ép phải liên minh với các yêu quái để tự cứu mình. Sau hết thất bại này đến thất bại khác đã ngộ ra được ý nghĩa thực sự của hai chữ "Đại Thánh".
+    
+                    </p>
+                    <a href="https://www.iq.com/album/dai-thanh-2020-14qfil3ddes?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+            </div>
+            <a class="name" href="https://www.iq.com/album/dai-thanh-2020-14qfil3ddes?lang=vi_vn">Đại Thánh</a>
+        </div>
+
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/hong hai nhi 2.png')" onmouseleave="resetImage(this, '../img/hong hai nhi.png')">
+            <a href="https://www.iq.com/album/tay-du-ky-hong-hai-nhi-2021-ydnygo4g6k?lang=vi_vn">
+                <img src="../img/hong hai nhi.png" ></a>
+                <div class="overlay-content">
+                    <div class="movie-buttons">
+                        <a href="https://www.iq.com/album/tay-du-ky-hong-hai-nhi-2021-ydnygo4g6k?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                        <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <p class="movie-title" >Tây Du Ký Hồng Hài Nhi</p>
+                    <p class="movie-rating">⭐9.8 </p>
+                    <p class="movie-year">Năm phát hành: 2021 </p>
+                    <p class="movie-genre">Thể loại: Phim Hài, Viễn Tưởng, Hành Động</p>
+                    <p class="movie-synopsis">
+                        500 năm trước, Tôn Ngộ Không đại náo Thiên Cung, bất ngờ đá lật lò Bát Quái mà dẫn đến thiên hỏa giáng thế. Thiết Phiến công chúa dốc sức áp chế thiên hỏa vì muốn cứu vớt muôn dân. Nhưng Hồng Hài Nhi trong bùng bà lại bị tam muội chân hỏa của lò Bát Quái làm hại mà trở thành ma đồng. Nhằm tìm vật quý hiếm cho người mẹ, Hồng Hài Nhi bị Thương Lang Quái xúi giục đi bắt Đường Tăng. Do vậy đứa đại chiến với Tôn Ngộ Không và bất ngờ hai người lại bị Thương Lang Quái nhốt vào lò Bát Quái. Hóa ra Thương Lang Quái oán hận người thân bị chết do thiên hỏa khi nó còn nhỏ mà đời thời cơ trả thù. Tuy nhiên hành vị của Thương Lang Quái lại khiến muôn dân rơi vào cảnh khó đối mặt với thiên hỏa...
+                    </p>
+                    <a href="https://www.iq.com/album/tay-du-ky-hong-hai-nhi-2021-ydnygo4g6k?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+            </div>
+            <a class="name" href="https://www.iq.com/album/tay-du-ky-hong-hai-nhi-2021-ydnygo4g6k?lang=vi_vn">Tây Du Ký Hồng Hài Nhi</a>
+        </div>
+
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/nguyet quang bao hop 2.png')" onmouseleave="resetImage(this, '../img/nguyet quang bao hop.png')">
+            <a href="https://www.iq.com/album/tay-du-ky-nguyet-quang-bao-hop-1995-19rxrbd674?lang=vi_vn">
+                <img src="../img/nguyet quang bao hop.png" ></a>
+                <div class="overlay-content">
+                    <div class="movie-buttons">
+                        <a href="https://www.iq.com/album/tay-du-ky-nguyet-quang-bao-hop-1995-19rxrbd674?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                        <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <p class="movie-title" > Tây Du Ký: Nguyệt Quang Bảo Hộp</p>
+                    <p class="movie-rating">⭐9.8 </p>
+                    <p class="movie-year">Năm phát hành: 1995 </p>
+                    <p class="movie-genre">Thể loại: Lãng mạn, Phim Hài, Hôn Nhân</p>
+                    <p class="movie-synopsis">
+                        Giới thiệu: Loạt phim Hồng Kông nhất định phải xem, một trong những bộ phim tình cảm được yêu thích nhất trong làn điện ảnh Hoa Ngữ! Cho dù Nguyệt Quang Bảo Hộp có thể vượt qua thời gian, nhưng tình yêu mất đi có thể có được một cách thuận lợi không?
+
+                    </p>
+                    <a href="https://www.iq.com/album/tay-du-ky-nguyet-quang-bao-hop-1995-19rxrbd674?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+            </div>
+            <a class="name" href="https://www.iq.com/album/tay-du-ky-nguyet-quang-bao-hop-1995-19rxrbd674?lang=vi_vn    ">Tây Du Ký: Nguyệt Quang Bảo Hộp</a>
+        </div>
+
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/tay du van dao 2.png')" onmouseleave="resetImage(this, '../img/tay du van dao.png')">
+            <a href="https://www.iq.com/album/tay-du-van-dao-2023-1gf4hj73m2c?lang=vi_vn">
+                <img src="../img/tay du van dao.png" ></a>
+                <div class="overlay-content">
+                    <div class="movie-buttons">
+                        <a href="https://www.iq.com/album/tay-du-van-dao-2023-1gf4hj73m2c?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                        <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <p class="movie-title" > Tây Du Vấn Đạo</p>
+                    <p class="movie-rating">⭐9.8 </p>
+                    <p class="movie-year">Năm phát hành: 2023 </p>
+                    <p class="movie-genre">Thể loại: Hư Cấu, Hành Động, Viễn Tưởng</p>
+                    <p class="movie-synopsis">
+                        Phim kể về câu chuyện Tôn Ngộ Không đánh bại Đức Phật và cùng với tróc yêu sư Hoa Tình giải cứu tất cả chúng sinh trong yêu giới. Từ thời Bàn Cổ mở cõi Hồng Mông, trận chiến giữa thần tộc và yêu tộc chưa từng dừng lại. Tôn Ngộ Không phạm tội ác tày trời đi theo Đường Tăng đến Tây Thiên thỉnh kinh, trên đường đi Ngộ Không đã đánh bại và phong ấn người bạn cũ Ngưu Ma Vương đến báo thù, từ đó Tôn Ngộ Không bị yêu tộc coi là kẻ phản bội không thể tha thứ. Cùng lúc đó, nhân lúc Bồ Tát phải thực hiện giới luật, Hồng Hài Nhi vì muốn dùng sức mình gầy dựng lại vinh quang của yêu tộc, đã giết Ngộ Không để báo thù cho yêu tộc và giải cứu Ngưu Ma Vương. Nhờ vào pháp lực mạnh mẽ, Hồng Hài Nhi được yêu tộc tôn làm Yêu Vương. Dưới sự lãnh đạo của y, toàn bộ yêu tộc hừng hực nhiệt huyết, hăng hái gây rối và giết người vô tội một cách bừa bãi. Để giải cứu chúng sinh, Tôn Ngộ Không quay trở lại cõi phàm trần, trên đường đi hắn bắt gặp tróc yêu sư Hoa Tình, cả hai cùng bắt tay hợp tác để chống lại Yêu Vương Hồng Hài Nhi. Vì yêu tộc tàn sát Thần tộc và tróc yêu sư, Nhị lang thần Dương Tiễn đã ra lệnh giết thẳng tay toàn bộ yêu tộc, khó tránh khỏi một trận chiến đẫm máu giữa thần tộc và yêu tộc.
+
+                    </p>
+                    <a href="https://www.iq.com/album/tay-du-van-dao-2023-1gf4hj73m2c?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+            </div>
+            <a class="name" href="https://www.iq.com/album/tay-du-van-dao-2023-1gf4hj73m2c?lang=vi_vn">Tây Du Vấn Đạo</a>
+        </div>
+
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/tinh yeu cua vua khi 2.png')" onmouseleave="resetImage(this, '../img/tinh yeu cua vua khi.png')">
+            <a href="https://www.iq.com/album/tinh-yeu-cua-vua-khi-2017-19rr765y34?lang=vi_vn">
+                <img src="../img/tinh yeu cua vua khi.png" ></a>
+                <div class="overlay-content">
+                    <div class="movie-buttons">
+                        <a href="https://www.iq.com/album/tinh-yeu-cua-vua-khi-2017-19rr765y34?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                        <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <p class="movie-title" > Tình yêu của vua khỉ</p>
+                    <p class="movie-rating">⭐9.8 </p>
+                    <p class="movie-year">Năm phát hành: 2021 </p>
+                    <p class="movie-genre">Thể loại: Lãng mạn, Phim Hài, Viễn Tưởng</p>
+                    <p class="movie-synopsis">
+                        Tình Yêu Của Vua Khỉ phát sóng trên iQIYI
+                    </p>
+                    <a href="https://www.iq.com/album/tinh-yeu-cua-vua-khi-2017-19rr765y34?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+            </div>
+            <a class="name" href="https://www.iq.com/album/tinh-yeu-cua-vua-khi-2017-19rr765y34?lang=vi_vn">Tình yêu của vua khỉ</a>
+        </div>
+
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/ngu hanh son 2.png')" onmouseleave="resetImage(this, '../img/ngu hanh son.png')">
+            <a href="https://www.iq.com/album/dai-mong-tay-du-ngu-hanh-son-2022-1zcoo5qtpck?lang=vi_vn">
+                <img src="../img/ngu hanh son.png" ></a>
+                <div class="overlay-content">
+                    <div class="movie-buttons">
+                        <a href="https://www.iq.com/album/dai-mong-tay-du-ngu-hanh-son-2022-1zcoo5qtpck?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                        <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <p class="movie-title" > Đại Mộng Tây Du: Ngũ Hành Sơn</p>
+                    <p class="movie-rating">⭐9.8 </p>
+                    <p class="movie-year">Năm phát hành: 2022 </p>
+                    <p class="movie-genre">Thể loại: Hành Động, Tình Tiết</p>
+                    <p class="movie-synopsis">
+                        Tôn Ngộ Không đại náo thiên cung phạm phải tội tài trời. Tổ Sư Bồ Đề hy sinh để đổi lấy mạng sống của Tôn Ngộ Không, bị Phật Tổ đày xuống chân núi Ngũ Hành để sám hối tội lỗi.Thái Bạch Kim Tinh muốn đưa Tổ sư Bồ Đề trở lại núi ở Linh Đài, nhưng bị ma vương Thế Nguyên chặn lại, vì vậy Thái Bạch Kim Tinh không còn cách nào khác, đành phải nhờ Tôn Ngộ Không ở chân núi Ngũ Hành để tiếp tục hoàn thành tâm nguyện cuối cùng của Tổ sư Bồ Đề. Tuy khó khắn nhưng Tôn Ngộ Không đều đã vượt qua và hoàn thành con đường cứu chuộc bản thân.
+                    </p>
+                    <a href="https://www.iq.com/album/dai-mong-tay-du-ngu-hanh-son-2022-1zcoo5qtpck?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+            </div>
+            <a class="name" href="https://www.iq.com/album/dai-mong-tay-du-ngu-hanh-son-2022-1zcoo5qtpck?lang=vi_vn">Đại Mộng Tây Du: Ngũ Hành Sơn</a>
+        </div>
+
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/dau chuyen can khon 2.png')" onmouseleave="resetImage(this, '../img/dau chuyen can khon.png')">
+            <a href="https://www.iq.com/album/dau-chuyen-can-khon-2024-20xw2u4fil0?lang=vi_vn">
+                <img src="../img/dau chuyen can khon.png" ></a>
+                <div class="overlay-content">
+                    <div class="movie-buttons">
+                        <a href="https://www.iq.com/album/dau-chuyen-can-khon-2024-20xw2u4fil0?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                        <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <p class="movie-title" > Đấu Chuyển Càn Khôn</p>
+                    <p class="movie-rating">⭐9.8 </p>
+                    <p class="movie-year">Năm phát hành: 2024 </p>
+                    <p class="movie-genre">Thể loại: Hư Cấu, Tình Tiết, Hành Động</p>
+                    <p class="movie-synopsis">
+                        Câu chuyện kể về nhân vật chính Vân Thư, vì chính nghĩa của thế gian mà một lòng muốn tìm ra tung tích của Hầu Vương Đấu Chiến Thắng Phật, nhằm lật đổ sự thống trị tàn bạo của Hỗn Thế Ngoan Hầu Diễm Nhĩ. Trong quá trình tìm kiếm, anh dần phát hiện ra sự mất tích của Đấu Chiến Thắng Phật có liên quan đến âm mưu của Ma Tôn muốn phá vỡ phong ấn và tái kiểm soát Tam giới, và Diễm Nhĩ cũng chỉ là một con tốt bị Ma Tôn lợi dụng. Cuối cùng, dưới sự cảm hóa và giúp đỡ của Thần Nữ A Hà, Vân Thư vượt qua chính mình, ngăn chặn việc mở cánh cửa phong ấn và trở thành anh hùng thực sự.
+
+                    </p>
+                    <a href="https://www.iq.com/album/dau-chuyen-can-khon-2024-20xw2u4fil0?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+            </div>
+            <a class="name" href="https://www.iq.com/album/dau-chuyen-can-khon-2024-20xw2u4fil0?lang=vi_vn">Đấu Chuyển Càn Khôn</a>
+        </div>
+
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/su da linh 2.png')" onmouseleave="resetImage(this, '../img/su da linh.png')">
+            <a href="https://www.iq.com/album/ton-ngo-khong-dai-nao-su-da-linh-2024-yos2s7tvxs?lang=vi_vn">
+                <img src="../img/su da linh.png" ></a>
+                <div class="overlay-content">
+                    <div class="movie-buttons">
+                        <a href="https://www.iq.com/album/ton-ngo-khong-dai-nao-su-da-linh-2024-yos2s7tvxs?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                        <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <p class="movie-title" > Tôn Ngộ Không Đại Náo Sư Đà Lĩnh</p>
+                    <p class="movie-rating">⭐9.8 </p>
+                    <p class="movie-year">Năm phát hành: 2024 </p>
+                    <p class="movie-genre">Thể loại: Cổ Trang, Hư Cấu, Hành Động</p>
+                    <p class="movie-synopsis">
+                        Tôn Ngộ Không Đại Náo Sư Đà Lĩnh phát sóng tại iQIYI
+                    </p>
+                    <a href="https://www.iq.com/album/ton-ngo-khong-dai-nao-su-da-linh-2024-yos2s7tvxs?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+            </div>
+            <a class="name" href="https://www.iq.com/album/ton-ngo-khong-dai-nao-su-da-linh-2024-yos2s7tvxs?lang=vi_vn">Tôn Ngộ Không Đại Náo Sư Đà Lĩnh</a>
+        </div>
+
+        <div class="movie-item" onmouseenter="changeImage(this, '../img/ngo khong ky truyen 2.jpg')" onmouseleave="resetImage(this, '../img/ngo khong ky truyen.png')">
+            <a href="https://www.iq.com/album/ngo-khong-ky-truyen-2017-19rx7om7so?lang=vi_vn">
+                <img src="../img/ngo khong ky truyen.png" ></a>
+                <div class="overlay-content">
+                    <div class="movie-buttons">
+                        <a href="https://www.iq.com/album/ngo-khong-ky-truyen-2017-19rx7om7so?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                        <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <p class="movie-title" > Ngộ Không Kỳ Truyện</p>
+                    <p class="movie-rating">⭐9.8 </p>
+                    <p class="movie-year">Năm phát hành: 2021 </p>
+                    <p class="movie-genre">Thể loại: Hành Động, Tình Tiết, Viễn Tưởng</p>
+                    <p class="movie-synopsis">
+                        "Đây không phải là chương nào của Tây Du Ký ,đây là truyện của Ngộ Không,Ngộ Không lúc ấy (Bành Vu Yến đóng vai) không phải là tề thiên đại thánh mà chấn động trời đất,hắn chỉ là một con khỉ bướng bỉnh không chịu phục tùng.Thiên đình phá hủy Hoa Qủa Sơn của hắn để khống chế số phận của chúng sinh,hắn thì quyết định chống với thiên đình,phá hủy tất cả giới luật.Tất cả sư việc mà họ làm, là hăng hái sôi nổi không hiểu trời cao đất dày hay là tuyệt vọng kiềm chế do khoong thể thảy đổi số phận?Chẳng lẽ số phận chắc là đã định trước? Ngộ Không không chịu,hắn lại vẫy một lần nữa Gậy như ý, làm cho tất cả các phật đều biến mất.
+                    </p>
+                    <a href="https://www.iq.com/album/ngo-khong-ky-truyen-2017-19rx7om7so?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+            </div>
+            <a class="name" href="https://www.iq.com/album/ngo-khong-ky-truyen-2017-19rx7om7so?lang=vi_vn">Ngộ Không Kỳ Truyện</a>
+        </div>
+
+        <button class="next-item">&#10095;</button>  
+    </section>
+</div>
+    
+<h2>Thanh Gươm Diệt Quỷ</h2>
+<div class="movie">
+    
+    <section class="movie-list">
+    <button class="prev-item" onclick="moveLeft()">&#10094;</button> 
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/thanh guom diet quy dai tru dac huan 2.jpg')" onmouseleave="resetImage(this, '../img/thanh guom diet quy, dai tru dac huan.png')">   
+        <a href="https://www.iq.com/album/thanh-guom-diet-quy-dai-tru-dac-huan-2024-o4osd93g8x?lang=vi_vn">
+            <img src="../img/thanh guom diet quy, dai tru dac huan.png" alt=""></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/thanh-guom-diet-quy-dai-tru-dac-huan-2024-o4osd93g8x?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" >Thanh Gươm Diệt Quỷ: Đại Trụ Đặc Huấn </p>
+                <p class="movie-rating">⭐ 9.8 </p>
+                <p class="movie-year">Năm phát hành: 2024  </p>
+                <p class="movie-genre">Thể loại: Tiếng Nhật, Nhiệt Huyết, Phiêu Lưu</p>
+                <p class="movie-synopsis">
+                    Giới thiệu: Đợt Đại Trụ Đặc Huấn sắp bắt đầu... Đại Trụ - những kiếm sĩ mạnh nhất Quân Đoàn Diệt Quỷ, và những kiếm sĩ diệt quỷ khác, cùng nhau luyện tập trong đợt Đại Trụ Đặc Huấn nhằm chuẩn bị cho trận quyết chiến với Kibutsuji Muzan. Ai cũng bồi hồi với nhiều cung bậc cảm xúc. Trang sử mới về hành trình của Tanjiro cùng các Đại Trụ bắt đầu.
+                </p>
+                <a href="https://www.iq.com/album/thanh-guom-diet-quy-dai-tru-dac-huan-2024-o4osd93g8x?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+            </div>
+        <a class="name" href="https://www.iq.com/album/thanh-guom-diet-quy-dai-tru-dac-huan-2024-o4osd93g8x?lang=vi_vn">Thanh Gươm Diệt Quỷ: Đại Trụ Đặc Huấn</a>
+    </div>
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/thanh gươm diet quy 2.jpg')" onmouseleave="resetImage(this, '../img/thanh guom diet quy.jpg')">
+        <a href="https://www.iq.com/album/thanh-guom-diet-quy-2019-1hn8abb7b3x?lang=vi_vn">
+            <img src="../img/thanh guom diet quy.jpg"></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/thanh-guom-diet-quy-2019-1hn8abb7b3x?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" > Thanh Gươm Diệt Quỷ</p>
+                <p class="movie-rating">⭐ 9.3</p>
+                <p class="movie-year">Năm phát hành: 2019 </p>
+                <p class="movie-genre">Thể loại: Nhật Bản, Nhiệt Huyết, Viễn Tưởng </p>
+                <p class="movie-synopsis">
+                    Giới thiệu: Thanh Gươm Diệt Quỷ kể về câu chuyện diễn ra tại thế giới nơi mà ác quỷ ăn thịt người hoành hành ngang dọc. Gia đình Tanjiro bị quỷ giết chết, em gái cũng bị dính lời nguyền mà biến thành quỷ. Dưới sự dẫn dắt của người săn quỷ, Tanjiro đã trở thành một thành viên của "Đội diệt quỷ". Từ đây, cậu đã tham gia chiến đấu và tìm mọi cách giúp em gái mình trở lại làm người. Cuộc chiến đấu thảo phạt bọn ác quỷ đã giết hại gia đình mình cũng là cuộc chiến đấu với mục đích để chấm dứt chuỗi ngày đau thương...
+                </p>
+                <a href="https://www.iq.com/album/thanh-guom-diet-quy-2019-1hn8abb7b3x?lang=vi_vn" class="movie-info" id="infor">Xem thêm ></a>
+            </div>
+        <a class="name" href="https://www.iq.com/album/thanh-guom-diet-quy-2019-1hn8abb7b3x?lang=vi_vn">Thanh Gươm Diệt Quỷ</a>
+    </div>
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/thanh guom diet quy, pho den do 2.png')" onmouseleave="resetImage(this, '../img/thanh guom diet quy, pho den do.png')">   
+        <a href="https://www.iq.com/album/long-tieng-thanh-guom-diet-quy-pho-den-do-ky-vien-tran-2021-ni2tcw1hnh?lang=vi_vn">
+            <img src="../img/thanh guom diet quy, pho den do.png" alt=""></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/long-tieng-thanh-guom-diet-quy-pho-den-do-ky-vien-tran-2021-ni2tcw1hnh?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" > Thanh Gươm Diệt Quỷ: Phố Đèn Đỏ</p>
+                <p class="movie-rating">⭐ 9.5 </p>
+                <p class="movie-year">Năm phát hành: 2021 </p>
+                <p class="movie-genre">Thể loại: Viễn Tưởng, Nhiệt Huyết, Phiêu Lưu</p>
+                <p class="movie-synopsis">
+                    Giới thiệu:  Thanh Gươm Diệt Quỷ: Chuyến Tàu Vô Tận (Bản TV) kể về chuyến hành trình của nhóm Tanjirou, họ nhận lệnh đi hỗ trợ cho Viêm Trụ Rengoku điều tra những vụ mất tích trên đoàn tàu mang biển hiệu Vô Tận. Thế nhưng, khi đến nơi thì họ mới nhận ra vụ việc đã chuyển biến hết sức nghiêm trọng. Đồng thời, cả nhóm cũng bị con quỷ điều khiển đoàn tàu đẩy vào mộng giới nhằm trừ khử họ.                  
+                </p>
+                <a href="https://www.iq.com/album/long-tieng-thanh-guom-diet-quy-pho-den-do-ky-vien-tran-2021-ni2tcw1hnh?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+            </div>
+        <a class="name" href="https://www.iq.com/album/long-tieng-thanh-guom-diet-quy-pho-den-do-ky-vien-tran-2021-ni2tcw1hnh?lang=vi_vn">Thanh Gươm Diệt Quỷ: Phố Đèn Đỏ</a>
+    </div>
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/nui nhen nada 2.jpg')" onmouseleave="resetImage(this, '../img/nui nhen nada.jpg')"> 
+        <a href="https://www.iq.com/album/thanh-guom-diet-quy-nui-nhen-nada-2020-1o87rzlmuu8?lang=vi_vn">
+            <img src="../img/nui nhen nada.jpg" ></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/thanh-guom-diet-quy-nui-nhen-nada-2020-1o87rzlmuu8?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" > Thanh Gươm Diệt Quỷ: Núi Nhện Nada </p>
+                <p class="movie-rating">⭐ 9.4 </p>
+                <p class="movie-year">Năm phát hành:2022 </p>
+                <p class="movie-genre">Thể loại: Nhật Bản, Viễn Tưởng, Phiêu Lưu, Gia Đình </p>
+                <p class="movie-synopsis">
+                    Giới Thiệu: Thanh Gươm Diệt Quỷ: Núi Nhện Nada phát sóng trên IQIYI
+                </p>
+                <a href="https://www.iq.com/album/thanh-guom-diet-quy-nui-nhen-nada-2020-1o87rzlmuu8?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/thanh-guom-diet-quy-nui-nhen-nada-2020-1o87rzlmuu8?lang=vi_vn">Thanh Gươm Diệt Quỷ: Núi Nhện Nada</a>
+    </div>
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/asuka 2.jpg')" onmouseleave="resetImage(this, '../img/asuka.jpg')">
+        <a href="https://www.iq.com/album/thanh-guom-diet-quy-asakusa-2021-1pvplp09eoo?lang=vi_vn">
+            <img src="../img/asuka.jpg"></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/thanh-guom-diet-quy-asakusa-2021-1pvplp09eoo?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" > Thanh Gươm Diệt Quỷ: Asakusa</p>
+                <p class="movie-rating"> ⭐ 9.5</p>
+                <p class="movie-year">Năm phát hành: 2021 </p>
+                <p class="movie-genre">Thể loại: Nhật Bản, Hành Động, Viễn Tưởng, Phiêu Lưu </p>
+                <p class="movie-synopsis">
+                    Thanh Gươm Diệt Quỷ kể về câu chuyện diễn ra tại thế giới nơi mà ác quỷ ăn thịt người hoành hành ngang dọc. Gia đình Tanjiro bị quỷ giết chết, em gái cũng bị dính lời nguyền mà biến thành quỷ. Dưới sự dẫn dắt của người săn quỷ, Tanjiro đã trở thành một thành viên của "Đội diệt quỷ". Từ đây, cậu đã tham gia chiến đấu và tìm mọi cách giúp em gái mình trở lại làm người. Cuộc chiến đấu thảo phạt bọn ác quỷ đã giết hại gia đình mình cũng là cuộc chiến đấu với mục đích để chấm dứt chuỗi ngày đau thương...
+
+                </p>
+                <a href="https://www.iq.com/album/thanh-guom-diet-quy-asakusa-2021-1pvplp09eoo?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/thanh-guom-diet-quy-asakusa-2021-1pvplp09eoo?lang=vi_vn">Thanh Gươm Diệt Quỷ: Asakusa</a>
+    </div>
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/dinh thu buom buom 2.jpg')" onmouseleave="resetImage(this, '../img/dinh thu buom buom.jpg')">
+        <a href="https://www.iq.com/album/thanh-guom-diet-quy-hoi-nghi-tru-cot-dinh-thu-buom-buom-2020-2ccgizu0u7k?lang=vi_vn">
+            <img src="../img/dinh thu buom buom.jpg" ></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/thanh-guom-diet-quy-hoi-nghi-tru-cot-dinh-thu-buom-buom-2020-2ccgizu0u7k?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" > Thanh Gươm Diệt Quỷ: Hội nghị trụ cột - Dinh thự bươm bướm</p>
+                <p class="movie-rating">⭐9.4 </p>
+                <p class="movie-year">Năm phát hành: 2020 </p>
+                <p class="movie-genre">Thể loại: Nhật Bản, Hành Động Viễn Tưởng, Trả Thù </p>
+                <p class="movie-synopsis">
+                    Thanh Gươm Diệt Quỷ: Hội nghị trụ cột - Dinh thự bươm bướm phát sóng trên iQIYI
+                </p>
+                <a href="https://www.iq.com/album/thanh-guom-diet-quy-hoi-nghi-tru-cot-dinh-thu-buom-buom-2020-2ccgizu0u7k?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/thanh-guom-diet-quy-hoi-nghi-tru-cot-dinh-thu-buom-buom-2020-2ccgizu0u7k?lang=vi_vn">Thanh Gươm Diệt Quỷ: Hội nghị trụ cột - Dinh thự bươm bướm</a>
+    </div>
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/tgdq lang tho ren 2.jpg')" onmouseleave="resetImage(this, '../img/lang tho ren.jpg')">
+        <a href="https://www.iq.com/album/thanh-guom-diet-quy-lang-tho-ren-2023-2e0tbmdwxqp?lang=vi_vn">
+            <img src="../img/lang tho ren.jpg" alt=""></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/thanh-guom-diet-quy-lang-tho-ren-2023-2e0tbmdwxqp?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" > Thanh Gươm Diệt Quỷ: Làng Thợ Rèn</p>
+                <p class="movie-rating">⭐9.4 </p>
+                <p class="movie-year">Năm phát hành: 2023 </p>
+                <p class="movie-genre">Thể loại: Nhật Bản, Nhiệt Huyết, Phiêu Lưu </p>
+                <p class="movie-synopsis">
+                    "Thanh gươm hủy diệt: Làng làm dao" là phần thứ ba của phim hoạt hình truyền hình Nhật Bản, được chuyển thể từ tập thứ mười hai của bộ truyện tranh "Thanh gươm hủy diệt" của đạo diễn Haruo Tozaki. Câu chuyện chuyển sang một giai đoạn mới——Tanjiro đã đến "Làng thợ rèn". Kể từ khi Công chúa sa ngã và hầu nữ Taro bị chặt đầu, vị trí của thượng huyền có một chỗ trống, vì vậy Yiwozuo và các thành viên thượng huyền khác đều bị Muzan triệu tập đến thành. Đối mặt với chỗ trống của thượng huyền, Muzan cảm thấy tức giận và nghĩ rằng các thành viên của thượng huyền nên cố gắng hết sức để tìm ra "bỉ ngạn hoa" và tiêu diệt đội diệt ma, Muzan đã chỉ định người đến một địa điểm nhất định để thực hiện nhiệm vụ. Mặt khác, Tanjiro, khi đã hồi phục vết thương biết rằng Steel Ryu sẽ không làm lại một thanh kiếm mới cho mình, vì vậy cậu đã làm theo lời khuyên đi đến Làng thợ rèn để thuyết phục họ làm lại những thanh kiếm mới. Khi Tanjiro đến Làng thợ rèn, cậu gặp Oizhu, Kanroji Mitsuri, Kasumizu, Tokitomuichiro và Undead Kawa Genya. Tanjiro và những người khác sắp bắt đầu một trận chiến mới. Bài hát chủ đề mở đầu được hát bởi MAN WITH A MISSION × milet Bài hát chủ đề mở đầu "The Miracle of Kizuna (Kizuno Miracle)" được viết và sáng tác bởi Jean-Ken Johnny, và được phối khí bởi MAN WITH A MISSION (cũng bởi công ty Sony Music Records).Chisako Iizuka phụ trách bài hát chủ đề. Phim sẽ được phát sóng trực tuyến trên IQIYI quốc tế (iq.com) từ ngày 9/4.
+                </p>
+                <a href="https://www.iq.com/album/thanh-guom-diet-quy-lang-tho-ren-2023-2e0tbmdwxqp?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/thanh-guom-diet-quy-lang-tho-ren-2023-2e0tbmdwxqp?lang=vi_vn">Thanh Gươm Diệt Quỷ: Làng Thợ Rèn</a>
+    </div>
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/tgdq dinh thu tsuzumi 2.jpg')" onmouseleave="resetImage(this, '../img/tgdq dinh thu tsuzumi.jpg')">
+        <a href="https://www.iq.com/album/thanh-guom-diet-quy-dinh-thu-tsuzumi-2021-19u4cqd2gqk?lang=vi_vn">
+            <img src="../img/tgdq dinh thu tsuzumi.jpg" alt=""></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/thanh-guom-diet-quy-dinh-thu-tsuzumi-2021-19u4cqd2gqk?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" > Thanh Gươm Diệt Quỷ: Dinh Thự Tsuzumi</p>
+                <p class="movie-rating">⭐9.4 </p>
+                <p class="movie-year">Năm phát hành: 2021 </p>
+                <p class="movie-genre">Thể loại: Nhật Bản, Hành Động, Hoạt Hình </p>
+                <p class="movie-synopsis">
+                    Thanh Gươm Diệt Quỷ kể về câu chuyện diễn ra tại thế giới nơi mà ác quỷ ăn thịt người hoành hành ngang dọc. Gia đình Tanjiro bị quỷ giết chết, em gái cũng bị dính lời nguyền mà biến thành quỷ. Dưới sự dẫn dắt của người săn quỷ, Tanjiro đã trở thành một thành viên của "Đội diệt quỷ". Từ đây, cậu đã tham gia chiến đấu và tìm mọi cách giúp em gái mình trở lại làm người. Cuộc chiến đấu thảo phạt bọn ác quỷ đã giết hại gia đình mình cũng là cuộc chiến đấu với mục đích để chấm dứt chuỗi ngày đau thương...
+                </p>
+                <a href="https://www.iq.com/album/thanh-guom-diet-quy-dinh-thu-tsuzumi-2021-19u4cqd2gqk?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/thanh-guom-diet-quy-dinh-thu-tsuzumi-2021-19u4cqd2gqk?lang=vi_vn">Thanh Gươm Diệt Quỷ: Dinh Thự Tsuzumi</a>
+    </div>
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/tgdq chuyen tau vo tan 2.jpg')" onmouseleave="resetImage(this, '../img/tgdq chuyen tau vo tan.jpg')">
+        <a href="https://www.iq.com/album/thanh-guom-diet-quy-chuyen-tau-vo-tan-2020-1lnf6kob358?lang=vi_vn">
+            <img src="../img/tgdq chuyen tau vo tan.jpg" alt=""></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/thanh-guom-diet-quy-chuyen-tau-vo-tan-2020-1lnf6kob358?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" > Thanh Gươm Diệt Quỷ: Chuyến Tàu Vô Tận</p>
+                <p class="movie-rating">⭐9.4 </p>
+                <p class="movie-year">Năm phát hành: 2020 </p>
+                <p class="movie-genre">Thể loại: Nhật Bản, Hành Động, Phiêu Lưu </p>
+                <p class="movie-synopsis">
+                    Sau khi học tập ở Điệp Phủ, Tanjiro cùng những người bạn của mình đã tới vùng đất của nhiệm vụ tiếp theo: "Chuyến tàu vô tận". Chỉ trong thời gian ngắn, nơi này đã có hơi bốn mươi người mất tích. Mặc dù đã có một số kiếm sĩ được phái ra ngoài, nhưng tất cả đều bị mất liên lạc. Nhóm Tanjiro và Zenitsu, Inosuke cùng với Nezuko họp mặt với một trong những kiếm sĩ "Trụ" mạnh nhất của Đội Diệt Quỷ là Rengoku Kyojuro. Trên chuyến tàu vô tận tiến về phía bóng tối, bọn họ sẽ phải đối mặt với những con quỷ mai phục tại đây.
+                </p>
+                <a href="https://www.iq.com/album/thanh-guom-diet-quy-chuyen-tau-vo-tan-2020-1lnf6kob358?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/thanh-guom-diet-quy-chuyen-tau-vo-tan-2020-1lnf6kob358?lang=vi_vn">Thanh Gươm Diệt Quỷ: Chuyến Tàu Vô Tận</a>
+    </div>
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/tgdq quyet chien ky vien tran 2.jpg')" onmouseleave="resetImage(this, '../img/tgdq quyet chien ky vien tran.jpg')">
+        <a href="https://www.iq.com/album/thanh-guom-diet-quy-quyet-chien-ky-vien-tran-2023-1u0ih7ef0po?lang=vi_vn">
+            <img src="../img/tgdq quyet chien ky vien tran.jpg" alt=""></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/thanh-guom-diet-quy-quyet-chien-ky-vien-tran-2023-1u0ih7ef0po?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" > Thanh Gươm Diệt Quỷ: Quyết Chiến Kỹ Viện Trấn</p>
+                <p class="movie-rating">⭐9.5 </p>
+                <p class="movie-year">Năm phát hành: 2023 </p>
+                <p class="movie-genre">Thể loại: Phiêu Lưu, Hoạt Hình, Tình Bạn </p>
+                <p class="movie-synopsis">
+                    Thanh Gươm Diệt Quỷ: Quyết Chiến Kỹ Viện Trấn cập nhật với phụ đề tiếng Việt trên iQIYI
+                </p>
+                <a href="https://www.iq.com/album/thanh-guom-diet-quy-quyet-chien-ky-vien-tran-2023-1u0ih7ef0po?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/thanh-guom-diet-quy-quyet-chien-ky-vien-tran-2023-1u0ih7ef0po?lang=vi_vn">Thanh Gươm Diệt Quỷ: Quyết Chiến Kỹ Viện Trấn</a>
+    </div>
+
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/tgdq tham nhap ky vien tran 2.jpg')" onmouseleave="resetImage(this, '../img/tgdq tham nhap ky vien tran.jpg')">
+        <a href="https://www.iq.com/album/thanh-guom-diet-quy-tham-nhap-ky-vien-tran-2021-1giyvxx32v8?lang=vi_vn">
+            <img src="../img/tgdq tham nhap ky vien tran.jpg" ></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/thanh-guom-diet-quy-tham-nhap-ky-vien-tran-2021-1giyvxx32v8?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" > Thanh Gươm Diệt Quỷ: Thâm Nhập Kỹ Viện Trấn</p>
+                <p class="movie-rating">⭐9.8 </p>
+                <p class="movie-year">Năm phát hành: 2024 </p>
+                <p class="movie-genre">Thể loại: Nhật Bản, Tình Tiết, Phiêu Lưu </p>
+                <p class="movie-synopsis">
+                    Thanh Gươm Diệt Quỷ: Thâm Nhập Kỹ Viện Trấn (Demon Slayer: Entertainment District Infiltration Arc 2023) xoay quanh chuyến viếng thăm dinh thự Rengoku, Tanjiro và các đồng đội của mình bắt đầu một nhiệm vụ vào Khu giải trí, nơi chứa đựng những ham muốn và ác quỷ. Nhưng họ không đơn độc. Tham gia cùng họ là một đồng minh mới hào nhoáng - Sound Hashira Tengen Uzui!
+                </p>
+                <a href="https://www.iq.com/album/thanh-guom-diet-quy-tham-nhap-ky-vien-tran-2021-1giyvxx32v8?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/thanh-guom-diet-quy-tham-nhap-ky-vien-tran-2021-1giyvxx32v8?lang=vi_vn">Thanh Gươm Diệt Quỷ: Thâm Nhập Kỹ Viện Trấn</a>
+    </div>
+
+        <button class="next-item" onclick="moveRight()">&#10095;</button>  
+    </section>
+</div>
+    
+
+<div>
+    <a class="backtop" id="backtop" href="#">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+<div style="height: 35px;"></div>
+<!-- Footer bắt đầu -->
+<footer id="myFooter">
+<div class="footer-content">
+  <div class="footer-column">
+    <h3>Giới thiệu về chúng tôi</h3>
+    <ul>
+      <li><a href="https://www.iq.com/aboutus">Thông tin công ty</a></li>
+      <li><a href="https://www.iq.com/services-rights">Giới thiệu dịch vụ sản phẩm</a></li>
+      <li><a href="https://www.iq.com/download?lang=vi_vn">Cách xem</a></li>
+      <li><a href="https://ir.iqiyi.com/investor-overview?c=254698&p=irol-irhome">Quan hệ nhà đầu tư</a></li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <h3>Hợp tác</h3>
+    <ul>
+      <li><a href="https://www.iq.com/intl-common/partnerShip.html">Đăng quảng cáo</a></li>
+      <li><a href="https://www.iq.com/intl-common/partnerShip.html">Quan hệ kinh doanh</a></li>
+      <li><a href="https://www.iq.com/intl-common/preinstall.html">Hợp tác cài đặt trước</a></li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <h3>Hỗ trợ và giúp đỡ</h3>
+    <ul>
+      <li><a href="https://www.iq.com/intl-common/feedback.html?mod=vn&lang=vi_vn&entranceId=PCW/H5_navigation&agentType=426&ptid=01010031010021000000">Phản ánh ý kiến</a></li>
+      <li><a href="https://security.iqiyi.com/#oversea">Trung tâm phản hồi bảo mật</a></li>
+      <li><a href="https://intl-help.iq.com/m/?mod=vn&lang=vi_vn&entry=pc&entranceId=PCW/H5_navigation&agentType=426&ptid=01010031010021000000#_qy_scrollTop=0">Câu hỏi thường gặp</a></li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <h3>Điều khoản dịch vụ</h3>
+    <ul>
+      <li><a href="https://www.iq.com/intl-common/international-privacyagreement.html?lang=vi_vn">Điều khoản quyền riêng tư</a></li>
+      <li><a href="https://www.iq.com/intl-common/international-useragreement.html?lang=vi_vn">Điều khoản sử dụng</a></li>
+    </ul>
+  </div>
+</div>
+</footer>
+
+<!-- Footer kết thúc -->
+<script src="../JS/Header.js"></script>
+<script src="../JS/Slide.js"></script>
+<script src="../JS/List.js"></script>
+<script src="../JS/Footer.js"></script>
+<script src="../JS/formdangky.js"></script>
+<script src="../JS/BackTop.js"></script>
+<script src="../JS/DieuHuong.js"></script>
+</body>
+</html>
