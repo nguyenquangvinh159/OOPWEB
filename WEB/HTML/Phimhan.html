@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề xuất</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../CSS/iQIYI.css">
+    <link rel="stylesheet" href="../CSS/Header.css">
+    <link rel="stylesheet" href="../CSS/Slide.css">
+    <link rel="stylesheet" href="../CSS/List.css">
+    <link rel="stylesheet" href="../CSS/BackTop.css">
+    <link rel="stylesheet" href="../CSS/Dieu Huong.css">
+    <link rel="stylesheet" href="../CSS/Footer.css">
+</head>
+<body>
+    <div id="loginForm">
+        <h1><strong>Đăng ký</strong></h1>
+        <p>Nhanh chóng và dễ dàng.</p>
+        <hr>
+        <div>
+           <input type="text" id="Name" placeholder="Họ" required size="45%">
+            <input type="text" id="Hoten" placeholder="Tên" required size="45%"><br>
+            <input type="text" id="Email" placeholder="Số điện thoại và Email" required size="95%"><br>
+            <input type="password" id="PassWord" placeholder="Mật Khẩu" required size="95%"><br>
+            <input type="password" id="XacNhanMatKhau" placeholder="Xác Nhận Mật Khẩu" required size="95%"><br>
+        </div><br>
+        <div>
+            <label for="">Ngày sinh &reg;</label><br>
+            <input type="number" id="date" min="1" max="31" placeholder="Ngày sinh" size="20px">
+            <input type="number" id="date" min="1" max="12" placeholder="Tháng sinh" size="20px">
+            <input type="number" id="date" min="1924" max="2024" placeholder="Năm sinh"size="20px">
+        </div><br>
+        <div>
+            <label for="gender"> Giới tính &reg;</label><br>
+            <label><input type="radio" name="gender" value="male">Nam</label>
+            <label><input type="radio" name="gender" value="female">Nữ</label>
+            <label><input type="radio" name="gender" value="other">Tùy chỉnh</label>
+        </div><br>
+        <p style="font-size: 80%;">Những người dùng dịch vụ của chúng tôi có thể đã tải thông tin liên hệ của bạn lên Facebook.<a href="#">Tìm hiểu thêm </a></p>
+        <p style="font-size: 80%;">Bằng cách nhấp vào Đăng ký, bạn đồng ý với <a href="#">Điều khoản</a>, <a href="#">Chính sách quyền riêng tư</a> và <a href="#">Chính sách cookie</a> của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ lúc nào </p>
+        <div style="text-align: center;">
+            <input id="submitLogin" type="button" style=" background-color: #009E60; color: white;" value="Đăng ký" onclick="CheckThongTin()">
+        </div>
+        <a href="#" style="color: #009E60;">Bạn đã có tài khoản ư?</a>
+</div>
+    <header id="header">
+        <div class="header-left">
+            <nav>
+                <ul>
+                    <a style="margin-left: 40px;" href="../HTML/dexuat.html"><img border="0" alf="logoiQIYI" src="../img/IQ.png" width="90px" height="30px"></a>
+                    <li><a href="../HTML/dexuat.html">Đề xuất</a></li>
+                    <li><a href="../HTML/Phimbo.html">Phim bộ</a></li>
+                    <li><a href="../HTML/Phimhan.html" class="highlight">Phim hàn</a></li>
+                    <li><a href="../HTML/PhimLe.html">Phim lẻ</a></li>
+                    <li><a href="../HTML/Hoathinh.html">Hoạt hình</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right">
+            </div><div class="search"><input type="text" class="search-bar" placeholder="Tìm kiếm...">|&#x1F50D;</div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="icon-links">
+                <div class="history">
+                    <button class="history-button">Lịch sử xem</button>
+                    <div class="popup-box">
+                        <img src="../img/box.png" class="popup-icon" /> 
+                        <p>Đăng nhập để quản lý lịch sử xem nội dung trên các thiết bị khác nhau.</p>
+                        <button id="login-button">Đăng nhập</button>
+                    </div>
+                </div>
+               <div class="Language">
+                    <button class="Language-button">Ngôn ngữ</button>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Tiếng Việt</a>
+                        <a href="#" class="dropdown-item">English</a>
+                        <a href="#" class="dropdown-item">日本語</a>
+                    </div>
+               </div>
+               <div class="my">
+                <button class="my-button">Của tôi</button>
+                    <div class="my-box">
+                        <p>Đăng nhập để theo dõi các nội dung mới nhất.</p>
+                        <button id="login-button">Đăng nhập</button>
+                    </div>
+                </div>
+            </div>
+            <button class="app-button">APP</button>
+            <button class="vip-button">VIP</button>
+        </div>
+    </header>
+    <div class="slider">
+        <div class="slides">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <img src="../img/thatdatuyet.jpg" alt="Movie 1">
+                <div class="info">
+                    <h2>Movie 1</h2>
+                    <p>Description of movie 1</p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="../img/ninhannhumong.jpg" alt="Movie 2">
+                <div class="info">
+                    <h2>Movie 2</h2>
+                    <p>Description of movie 2</p>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="../img/khangkhangnhatthuong.jpg" alt="Movie 3">
+                <div class="info">
+                    <h2>Movie 3</h2>
+                    <p>Description of movie 3</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="../img/thatdatuyet.jpg" alt="Movie 1">
+                <div class="info">
+                    <h2>Movie 1</h2>
+                    <p>Description of movie 1</p>
+                </div>
+            </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+    <h2>Đề xuất</h2>
+<div class="movie">
+    <section class="movie-list">
+        <button class="prev-item">&#10094;</button>
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/thailan2.jpg')" onmouseleave="resetImage(this, '../img/thailan1.jpg')">
+        <a href="https://www.iq.com/album/vuon-sao-bang-2009-1kzi97rcpr1?lang=vi_vn">
+            <img src="../img/thailan1.jpg" alt="Vườn sao băng">
+        </a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/vuon-sao-bang-2009-1kzi97rcpr1?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" >Vườn sao băng</p>
+                <p class="movie-rating">⭐ 9.6</p>
+                <p class="movie-year">Năm phát hành: 2009</p>
+                <p class="movie-genre">Thể loại: Hàn Quốc, Phim hài, Thành thị, Tiếng Hàn</p>
+                <p class="movie-synopsis">
+                    Được cải biên từ bộ truyện tranh Nhật Bản cùng tên "Vườn Sao Băng". Câu chuyện kể về cuộc sống sau khi chuyển đến ngôi trường quý tộc của một cô gái có gia cảnh bình thường. Tại đây cô gặp gỡ và quen biết với bốn anh chàng nhà giàu đẹp trai, đồng thời xảy ra vô số mâu thuẫn
+                </p>
+                <a href="https://www.iq.com/album/vuon-sao-bang-2009-1kzi97rcpr1?lang=vi_vn" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a> 
+            </div>
+            <a class="name" href="https://www.iq.com/album/vuon-sao-bang-2009-1kzi97rcpr1?lang=vi_vn">Vườn sao băng</a>
+    </div>
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/gumiho2.jpg')" onmouseleave="resetImage(this, '../img/gumiho1.jpg')">
+        <a href="https://www.iq.com/album/ban-cung-phong-cua-toi-la-gumiho-2021-1yv9k230lmd?lang=vi_vn">
+            <img src="../img/gumiho1.jpg" alt="gumiho">
+        </a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/ban-cung-phong-cua-toi-la-gumiho-2021-1yv9k230lmd?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" >Bạn Cùng Phòng Của Tôi Là Gumiho</p>
+                <p class="movie-rating">⭐ 9.5</p>
+                <p class="movie-year">Năm phát hành: 2021</p>
+                <p class="movie-genre">Thể loại: Hàn Quốc, Phim hài, Thành thị, Lãng mạng</p>
+                <p class="movie-synopsis">
+                    Bạn Cùng Phòng Của Tôi Là Gumiho (My Roommate is a Gumiho) là bộ phim truyền hình Hàn Quốc xoay quanh câu chuyện về nữ sinh viên đại học Lee Dam và nam hồ ly Shin Woo Yeo khi cô nàng vô tình nuốt phải quả cầu của cửu vĩ hồ khiến cả hai rơi vào tình huống đầy khó xử. Cô sẽ không thể sống quá 1 năm kể từ khi nuốt quả cầu đó, đồng thời cũng khiến cho cửu vĩ hồ Shin Woo Yeo mất đi cơ hội trở thành người sau 999 năm chờ đợi. Đó cũng chính là lý do đưa họ tới quyết định nên sống cùng nhau cho tới khi tìm ra giải pháp để đưa mọi thứ quay về vị trí ban đầu và những tình huống dở khóc dở cười bắt đầu từ đây.
+                </p>
+                <a href="https://www.iq.com/album/ban-cung-phong-cua-toi-la-gumiho-2021-1yv9k230lmd?lang=vi_vn" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a> 
+            </div>
+            <a class="name" href="https://www.iq.com/album/ban-cung-phong-cua-toi-la-gumiho-2021-1yv9k230lmd?lang=vi_vn">Bạn Cùng Phòng Của Tôi Là Gumiho</a>
+    </div>
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/baytinhyeu2.jpg')" onmouseleave="resetImage(this, '../img/baytinhyeu1.jpg')">
+        <a href="https://www.iq.com/album/bay-tinh-yeu-2016-19rrhx08bt?lang=vi_vn">
+            <img src="../img/baytinhyeu1.jpg" alt="bẫy tình yêu">
+        </a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/bay-tinh-yeu-2016-19rrhx08bt?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" >Bẫy Tình Yêu</p>
+                <p class="movie-rating">⭐ 9.3</p>
+                <p class="movie-year">Năm phát hành: 2016</p>
+                <p class="movie-genre">Thể loại: Hàn Quốc, Phim hài, Bí ẩn, Lãng mạng</p>
+                <p class="movie-synopsis">
+                    "Bẫy tình yêu"là câu chuyện xoay quanh mối quan hệ giữa cô sinh viên đại học Hong Seol (Kim Go Eun) và đàn anh cùng trường Yoo Jung (Park Hae Jin). Hong Seol là một sinh viên chăm chỉ, vì hoàn cảnh khốn khó mà phải đi làm thêm để trang trải cuộc sống. Yoo Jung là một chàng trai hoàn hảo. Anh có mọi thứ: gia thế, học thức, ngoại hình, sức khỏe, kể cả tính cách. Thế nhưng ẩn sau những điều tưởng như hoàn mĩ đó là góc khuất đen tối trong tâm hồn chàng thanh niên này. Người sẽ hóa giải cho những vấn đề của anh chính là cô nữ sinh hạng thường Hong Seol.
+                </p>
+                <a href="https://www.iq.com/album/bay-tinh-yeu-2016-19rrhx08bt?lang=vi_vn" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a> 
+            </div>
+            <a class="name" href="https://www.iq.com/album/bay-tinh-yeu-2016-19rrhx08bt?lang=vi_vn">Bẫy Tình Yêu</a>
+    </div>
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/hon le cua em 2.jpg')" onmouseleave="resetImage(this, '../img/hon le cua em.jpg')">
+        <a href="https://www.iq.com/album/hon-le-cua-em-2021-162m09tyw68?lang=vi_vn">
+            <img src="../img/hon le cua em.jpg" ></a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/hon-le-cua-em-2021-162m09tyw68?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" > Hôn Lễ Của Em</p>
+                <p class="movie-rating">⭐9.8 </p>
+                <p class="movie-year">Năm phát hành: 2021 </p>
+                <p class="movie-genre">Thể loại: Lãng mạn, Tình Tiết, Thanh Xuân, Học Đường</p>
+                <p class="movie-synopsis">
+                    Bộ phim kể về câu chuyện tình yêu kéo dài 15 năm giữa Châu Tiêu Tề - một nam sinh có năng khiếu bơi lội, và Vưu Vịnh Từ - một nữ sinh chuyển trường. Trong thời gian học cấp 3, Châu Tiêu Tề ( Hứa Quang Hán đóng) gặp phải tình yêu sét đánh với Vưu Vịnh Từ ( Chương Nhược Nam đóng), tình yêu thời thanh xuân ngây thơ và thuần khiết, cậu không ngừng âm thầm bảo vệ cô, nhưng cô lại rời đi không từ mà biệt. Từ đó về sau, chính là một cuộc tình kéo dài tận 15 năm. Hôn lễ của em, cũng chính là lễ trưởng thành của anh.
+
+                </p>
+                <a href="https://www.iq.com/album/hon-le-cua-em-2021-162m09tyw68?lang=vi_vn" class="movie-info" id="infor" >Xem thêm ></a>
+        </div>
+        <a class="name" href="https://www.iq.com/album/hon-le-cua-em-2021-162m09tyw68?lang=vi_vn">Hôn Lễ Của Em</a>
+    </div>
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/monkeyking2.jpg')" onmouseleave="resetImage(this, '../img/monkeyking1.jpg')">
+        <a href="https://www.iq.com/album/ton-ngo-khong-dai-nao-su-da-linh-2024-yos2s7tvxs?lang=vi_vn">
+            <img src="../img/monkeyking1.jpg" alt="Monkey King">
+        </a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/ton-ngo-khong-dai-nao-su-da-linh-2024-yos2s7tvxs?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" >Monkey King</p>
+                <p class="movie-rating">⭐ 9.2</p>
+                <p class="movie-year">Năm phát hành: 2024</p>
+                <p class="movie-genre">Thể loại: Trung Quốc đại lục, Hư cấu, Hành động, Cổ trang</p>
+                <a href="https://www.iq.com/album/ton-ngo-khong-dai-nao-su-da-linh-2024-yos2s7tvxs?lang=vi_vn" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a> 
+            </div>
+            <a class="name" href="https://www.iq.com/album/ton-ngo-khong-dai-nao-su-da-linh-2024-yos2s7tvxs?lang=vi_vn">Monkey King</a>
+    </div>
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/gumiho2.jpg')" onmouseleave="resetImage(this, '../img/gumiho1.jpg')">
+        <a href="https://www.iq.com/album/ban-cung-phong-cua-toi-la-gumiho-2021-1yv9k230lmd?lang=vi_vn">
+            <img src="../img/gumiho1.jpg" alt="gumiho">
+        </a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/ban-cung-phong-cua-toi-la-gumiho-2021-1yv9k230lmd?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" >Bạn Cùng Phòng Của Tôi Là Gumiho</p>
+                <p class="movie-rating">⭐ 9.5</p>
+                <p class="movie-year">Năm phát hành: 2021</p>
+                <p class="movie-genre">Thể loại: Hàn Quốc, Phim hài, Thành thị, Lãng mạng</p>
+                <p class="movie-synopsis">
+                    Bạn Cùng Phòng Của Tôi Là Gumiho (My Roommate is a Gumiho) là bộ phim truyền hình Hàn Quốc xoay quanh câu chuyện về nữ sinh viên đại học Lee Dam và nam hồ ly Shin Woo Yeo khi cô nàng vô tình nuốt phải quả cầu của cửu vĩ hồ khiến cả hai rơi vào tình huống đầy khó xử. Cô sẽ không thể sống quá 1 năm kể từ khi nuốt quả cầu đó, đồng thời cũng khiến cho cửu vĩ hồ Shin Woo Yeo mất đi cơ hội trở thành người sau 999 năm chờ đợi. Đó cũng chính là lý do đưa họ tới quyết định nên sống cùng nhau cho tới khi tìm ra giải pháp để đưa mọi thứ quay về vị trí ban đầu và những tình huống dở khóc dở cười bắt đầu từ đây.
+                </p>
+                <a href="https://www.iq.com/album/ban-cung-phong-cua-toi-la-gumiho-2021-1yv9k230lmd?lang=vi_vn" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a> 
+            </div>
+            <a class="name" href="https://www.iq.com/album/ban-cung-phong-cua-toi-la-gumiho-2021-1yv9k230lmd?lang=vi_vn">Bạn Cùng Phòng Của Tôi Là Gumiho</a>
+    </div>
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/baytinhyeu2.jpg')" onmouseleave="resetImage(this, '../img/baytinhyeu1.jpg')">
+        <a href="https://www.iq.com/album/bay-tinh-yeu-2016-19rrhx08bt?lang=vi_vn">
+            <img src="../img/baytinhyeu1.jpg" alt="bẫy tình yêu">
+        </a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/bay-tinh-yeu-2016-19rrhx08bt?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" >Bẫy Tình Yêu</p>
+                <p class="movie-rating">⭐ 9.3</p>
+                <p class="movie-year">Năm phát hành: 2016</p>
+                <p class="movie-genre">Thể loại: Hàn Quốc, Phim hài, Bí ẩn, Lãng mạng</p>
+                <p class="movie-synopsis">
+                    "Bẫy tình yêu"là câu chuyện xoay quanh mối quan hệ giữa cô sinh viên đại học Hong Seol (Kim Go Eun) và đàn anh cùng trường Yoo Jung (Park Hae Jin). Hong Seol là một sinh viên chăm chỉ, vì hoàn cảnh khốn khó mà phải đi làm thêm để trang trải cuộc sống. Yoo Jung là một chàng trai hoàn hảo. Anh có mọi thứ: gia thế, học thức, ngoại hình, sức khỏe, kể cả tính cách. Thế nhưng ẩn sau những điều tưởng như hoàn mĩ đó là góc khuất đen tối trong tâm hồn chàng thanh niên này. Người sẽ hóa giải cho những vấn đề của anh chính là cô nữ sinh hạng thường Hong Seol.
+                </p>
+                <a href="https://www.iq.com/album/bay-tinh-yeu-2016-19rrhx08bt?lang=vi_vn" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a> 
+            </div>
+            <a class="name" href="https://www.iq.com/album/bay-tinh-yeu-2016-19rrhx08bt?lang=vi_vn">Bẫy Tình Yêu</a>
+    </div>
+    <div class="movie-item" onmouseenter="changeImage(this, '../img/camtuanninh2.jpg')" onmouseleave="resetImage(this, '../img/camtuanninh1.jpg')">
+        <a href="https://www.iq.com/album/thuyet-minh-cam-tu-an-ninh-2024-wfdgs2poid?lang=vi_vn">
+            <img src="../img/camtuanninh1.jpg" alt="cẩm tú an ninh">
+        </a>
+            <div class="overlay-content">
+                <div class="movie-buttons">
+                    <a href="https://www.iq.com/album/thuyet-minh-cam-tu-an-ninh-2024-wfdgs2poid?lang=vi_vn" class="btn watch-btn"><img src="../img/xem.png"></a>
+                    <a href="#" class="btn collect-btn"><img src="../img/bosuutam.png"></a>
+                </div>
+            </div>
+            <div class="movie-details">
+                <p class="movie-title" >Cẩm Tú An Ninh</p>
+                <p class="movie-rating">⭐ 9.6</p>
+                <p class="movie-year">Năm phát hành: 2024</p>
+                <p class="movie-genre">Thể loại: Trung Quốc đại lục, Lãng mạng, Cổ trang, Tiếng Việt</p>
+                <p class="movie-synopsis">
+                    Từ nhỏ, tiểu thư nhà họ Lạc lớn lên tại biệt viện, không bị ràng buộc bởi những lễ nghi phiền phức. Vì không chịu nổi sự ức hiếp mà mọi người dành cho "Tam ca" Lạc Thận Viễn, cô nhiều lần ra tay giúp đỡ, dần dần phát hiện ra Lạc Thận Viễn tuy bề ngoài thất thế nhưng lại văn võ song toàn. Từng bị tổn thương trong tình cảm, Lạc Y Ninh không muốn bị giam cầm trong gia tộc hay phụ thuộc vào người khác nữa, quyết tâm dùng khả năng của mình mở cửa hàng kinh doanh để đạt được sự độc lập. Lạc Thận Viễn, trong hoàn cảnh cô đơn ở phủ Lạc, luôn tìm kiếm sự thật sau khi sư phụ bị vu oan mà mất mạng. Anh cảm kích vì Lạc Y Ninh mang đến cho mình sự ấm áp như gia đình, và khi cửa hàng của cô gặp khó khăn, anh dốc hết sức mình để hỗ trợ. Lạc Y Ninh cũng dần dần hiểu được ý nghĩa của sư phụ đối với Lạc Thận Viễn. Hai người dần trở nên gần gũi và nảy sinh tình cảm. Với sự giúp đỡ của Lạc Thận Viễn, Lạc Y Ninh không chỉ trừng trị kẻ đã hại mẹ ruột của mình mà còn quản lý cửa hàng một cách gọn gàng. Lạc Thận Viễn, dưới sự khuyến khích của Y Ninh, tham gia kỳ thi khoa cử và giành được vị trí đứng đầu, đồng thời tìm ra sự thật về vụ án oan năm xưa. Cuối cùng, hai người thành công minh oan cho sư phụ, đưa kẻ thủ ác ra trước công lý, từ đó sống một cuộc đời yên bình, không còn lo lắng.
+                </p>
+                <a href="https://www.iq.com/album/thuyet-minh-cam-tu-an-ninh-2024-wfdgs2poid?lang=vi_vn" class="movie-info" id="infor" style="font-size: 7px;">Xem thêm ></a> 
+            </div>
+            <a class="name" href="https://www.iq.com/album/thuyet-minh-cam-tu-an-ninh-2024-wfdgs2poid?lang=vi_vn">Cẩm Tú An Ninh</a>
+    </div>
+        <button class="next-item">&#10095;</button>
+        </section>
+    </div>
+    <div>
+        <a class="backtop" id="backtop" href="#">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+<footer id="myFooter">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Giới thiệu về chúng tôi</h3>
+            <ul>
+              <li><a href="https://www.iq.com/aboutus">Thông tin công ty</a></li>
+              <li><a href="https://www.iq.com/services-rights">Giới thiệu dịch vụ sản phẩm</a></li>
+              <li><a href="https://www.iq.com/download?lang=vi_vn">Cách xem</a></li>
+              <li><a href="https://ir.iqiyi.com/investor-overview?c=254698&p=irol-irhome">Quan hệ nhà đầu tư</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Hợp tác</h3>
+            <ul>
+              <li><a href="https://www.iq.com/intl-common/partnerShip.html">Đăng quảng cáo</a></li>
+              <li><a href="https://www.iq.com/intl-common/partnerShip.html">Quan hệ kinh doanh</a></li>
+              <li><a href="https://www.iq.com/intl-common/preinstall.html">Hợp tác cài đặt trước</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Hỗ trợ và giúp đỡ</h3>
+            <ul>
+              <li><a href="https://www.iq.com/intl-common/feedback.html?mod=vn&lang=vi_vn&entranceId=PCW/H5_navigation&agentType=426&ptid=01010031010021000000">Phản ánh ý kiến</a></li>
+              <li><a href="https://security.iqiyi.com/#oversea">Trung tâm phản hồi bảo mật</a></li>
+              <li><a href="https://intl-help.iq.com/m/?mod=vn&lang=vi_vn&entry=pc&entranceId=PCW/H5_navigation&agentType=426&ptid=01010031010021000000#_qy_scrollTop=0">Câu hỏi thường gặp</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Điều khoản dịch vụ</h3>
+            <ul>
+              <li><a href="https://www.iq.com/intl-common/international-privacyagreement.html?lang=vi_vn">Điều khoản quyền riêng tư</a></li>
+              <li><a href="https://www.iq.com/intl-common/international-useragreement.html?lang=vi_vn">Điều khoản sử dụng</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    <script src="../JS/Header.js"></script>
+    <script src="../JS/Slide.js"></script>
+    <script src="../JS/List.js"></script>
+    <script src="../JS/Footer.js"></script>
+    <script src="../JS/formdangky.js"></script>
+    <script src="../JS/BackTop.js"></script>
+    <script src="../JS/DieuHuong.js"></script>
+</body>
+</html>
