@@ -17,3 +17,16 @@ document.addEventListener("DOMContentLoaded", function() {
     // Gọi hàm một lần khi trang được tải (để xử lý trường hợp người dùng tải trang ở vị trí cuộn xuống)
     checkScroll();
 });
+$(document).ready(function(){
+    $("#login-button").click(function(){
+        $("#loginForm").css({
+            display: 'block',
+        });
+        $(".popup-box").css({
+            display: 'none',
+        });
+        $(".my-box").css({
+            display: 'none',
+        });
+    });
+});
