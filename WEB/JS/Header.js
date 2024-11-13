@@ -20,13 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 $(document).ready(function(){
     $("#login-button").click(function(){
         $("#loginForm").css({
-            display: 'block',
+            display: 'block',   
         });
-        $(".popup-box").css({
-            display: 'none',
-        });
-        $(".my-box").css({
-            display: 'none',
-        });
-    });
+    });s
 });

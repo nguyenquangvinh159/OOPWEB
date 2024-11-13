@@ -1,3 +1,4 @@
+
 section{
     padding-left: 10px;
     padding-right: 10px;
@@ -24,7 +25,7 @@ section{
 }
 
 .movie-list::-webkit-scrollbar {
-    display: none;
+    display: none; /*ẩn trên chrome, coc coc*/
 }
 .movie-list-china {
     display: flex;
@@ -119,19 +120,20 @@ h2{
 .name{
     font-size: 14px;
 }
+
 .overlay-content {
     position: absolute;
     top: 20%;
     right: 0%;
-    width: 50%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 80% ; */
     display: flex;
     align-items: flex-start;
     justify-content:flex-end;
     opacity: 0;
     transition: opacity 0.3s ease;
     padding: 10px;
-    z-index: 1; 
+    z-index: 1;
 }
 
 /* Khi hover vào ảnh, hiển thị nội dung */
@@ -142,8 +144,8 @@ h2{
 .movie-buttons {
     display: flex;
     flex-direction: row;
+    
 }
-
 .btn {
     padding: 5px 5px;
     border: none;
@@ -169,5 +171,6 @@ h2{
 .collect-btn:hover {
     background-color: white;
 }
-
-
+h2{
+    margin-left: 5px;
+}

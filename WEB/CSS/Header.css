@@ -3,7 +3,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    color: white;
+    color:rgba(255, 255, 255, 0.444);
     top: 0;
     left: 0;
     width: 100%;
@@ -12,7 +12,7 @@ header {
     z-index: 1000;
 }
 header.scrolled {
-    background-color: black; 
+    background-color: black;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .header-left  li a:hover {
@@ -26,17 +26,13 @@ nav ul {
     list-style: none;
     display: flex;
 }
-span{
-    text-align: center;
-    margin: 0 auto;
-}
 
 nav ul li {
     margin-left: 10px;
     margin-right: 20px;
 }
 
-nav ul li a{
+nav ul li a {
     margin-left: 10px;
     color: white;
     text-decoration: none;
@@ -51,55 +47,16 @@ nav ul li a.highlight {
 
 .header-right {
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
-.header-right span:hover {
+.header-right li a:hover {
     color: #009E60; 
 }
-.search{
-    height: 40px;
-    width: 300px;
-    border-radius: 5px;
-    border: none;
-    margin-right: 10px;
-    background-color: rgb(77, 77, 77);
-}
-.search-bar {
-    height: 40px;
-    width: 250px;
-    padding: 5px 10px;
-    margin-right: 10px;
-    border-radius: 5px;
-    border: none;
-    color: rgb(200, 197, 197);
-    background-color: rgb(77, 77, 77);
-}
-.search-bar li a:hover {
-    color: #009E60; 
-}
-.icon-links a {
-    color: white;
-    margin-right: 15px;
-    text-decoration: none;
+
+.header-right {
+    position: relative;
 }
 
-.app-button, .vip-button {
-    padding: 5px 15px;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 10px;
-}
-
-.app-button {
-    background-color: #ff8c00;
-}
-
-.vip-button {
-    margin-right: 40px;
-    background-color: #e3b200;
-}
 .history {
     position: relative;
     display: inline-block;
@@ -239,7 +196,7 @@ nav ul li a.highlight {
     cursor: pointer;
     display: block;
     margin: 10px auto 0;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .my-button:hover {
@@ -250,8 +207,37 @@ nav ul li a.highlight {
     display: block;
 }
 
-.icon-links{
+.search-bar {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+}
+.search-bar li a:hover {
+    color: #009E60;
+}
+.icon-links a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.app-button, .vip-button {
+    padding: 5px 15px;
+    border: none;
+    color: white;
+    border-radius: 5px;
     cursor: pointer;
+    margin-left: 10px;
+}
+
+.app-button {
+    background-color: #ff8c00;
+}
+
+.vip-button {
+    margin-right: 40px;
+    background-color: #e3b200;
 }
 #loginForm {
     display: none;

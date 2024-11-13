@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
   
     movieElements.forEach((movieElement) => {
       const movieList = movieElement.querySelector(".movie-list"); // Danh sách phim trong mỗi phần tử phim
-      const prevButton = movieElement.querySelector(".prev-item"); // Nút cuộn trái
-      const nextButton = movieElement.querySelector(".next-item"); // Nút cuộn phải
+      const prevButton = movieElement.querySelector(".prev-item"); 
+      const nextButton = movieElement.querySelector(".next-item"); 
   
       let currentScrollPosition = 0;
       const scrollAmount = 220;
