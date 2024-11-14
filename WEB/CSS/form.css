@@ -12,6 +12,7 @@
     transform: translate(-50%, -50%);
 }
 #loginForm input:not([type="radio"]){
+    padding: 5px;
     height: 35px;
     margin-top: 10px;
     border-radius: 5px;
