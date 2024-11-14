@@ -1,0 +1,26 @@
+body{
+    width: 60%;
+    margin: 0 auto; 
+}
+main{
+    display: flex;
+    margin-top: 40px
+}
+main ul li{
+    list-style: none;
+}
+main ul li a{
+    text-decoration: none;
+    color: black;
+}
+main .list{
+    margin-left: -4.5%;
+    margin-right: 50px;
+}
+main .thongtin{
+    margin-top: -30px;
+    width: 60%;
+}
+p {
+    text-align: justify;
+}
