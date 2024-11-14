@@ -239,15 +239,3 @@ nav ul li a.highlight {
     margin-right: 40px;
     background-color: #e3b200;
 }
-#loginForm {
-    display: none;
-    position: absolute; 
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    z-index: 20; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-}
