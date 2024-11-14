@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
     checkScroll();
 });
 $(document).ready(function(){
-    $("#login-button").click(function(){
+    $(".login-button").click(function(){
         $("#loginForm").css({
             display: 'block',   
         });
