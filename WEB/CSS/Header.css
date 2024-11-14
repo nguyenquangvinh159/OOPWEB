@@ -95,7 +95,7 @@ nav ul li a.highlight {
     height: auto;
 }
 
-#login-button {
+.login-button {
     background-color: #4CAF50;
     color: white;
     padding: 8px 16px;
@@ -107,7 +107,7 @@ nav ul li a.highlight {
     font-size: 15px;
 }
 
-#login-button:hover {
+.login-button:hover {
     background-color: #45a049;
 }
 
@@ -151,6 +151,7 @@ nav ul li a.highlight {
     text-decoration: none;
     font-size: 14px;
     text-align: center;
+    width: 100%;
 }
 
 .dropdown-item:hover {
