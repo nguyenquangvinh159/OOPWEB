@@ -1,6 +1,6 @@
 
 
-.body {
+body {
     background-color: #121212;
     color: #ffffff;
 } 
@@ -64,12 +64,27 @@
 .description {
     margin-bottom: 20px;
     line-height: 1.6;
+    width: 400px;   
+}
+.toggle-visibility {
+    display: none;
+}
+
+.more-content {
+    display: none;
+    margin-top: 10px;
 }
 
 .show-more {
-    color: #009E60;
     cursor: pointer;
-    background-color:#121212 ;
+    color: #009E60;
+    text-decoration: underline;
+}
+
+.show-more.expanded {
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .action-buttons {
@@ -101,5 +116,59 @@
 
 .image-section img {
     width: 100%;
-    /* border-radius: 10px; */
+    border-radius: 10px;
+}
+.container1 {
+    padding: 30px;
+    background-color: #1e1e1e;
+    margin-top: 20px;
+}
+
+.container1 h1 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.menu {
+    margin-bottom: 20px;
+}
+
+#episode-select {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #555;
+}
+
+.episodes {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.episode {
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+}
+
+
+.episode img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.episode img:hover{ 
+    transform: scale(1.05);
+}
+.episode-title {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #fff;
+}
+.episode-title:hover{
+    
+    color: #009E60;
 }
