@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iQIYI - Xem Phim Online</title>
     <link rel="icon" type="image/x-icon" href="../img/logoIQIYI.ico">
-
-    
     <link rel="stylesheet" href="../CSS/iQIYI.css">
+    <link rel="stylesheet" href="../CSS/form.css">
     <link rel="stylesheet" href="../CSS/Header.css">
     <link rel="stylesheet" href="../CSS/BackTop.css">
     <link rel="stylesheet" href="../CSS/Footer.css">
@@ -22,41 +21,35 @@
         <p>Nhanh chóng và dễ dàng.</p>
         <hr>
         <div>
-           <input type="text" id="Name" placeholder="Họ" required size="45%">
-            <input type="text" id="Hoten" placeholder="Tên" required size="45%"><br>
-            <input type="text" id="Email" placeholder="Số điện thoại và Email" required size="95%"><br>
-            <input type="password" id="PassWord" placeholder="Mật Khẩu" required size="95%"><br>
-            <input type="password" id="XacNhanMatKhau" placeholder="Xác Nhận Mật Khẩu" required size="95%"><br>
+            <input type="text" id="Name" placeholder="username" required size="39%">
+            <input type="text" id="Hoten" placeholder="Tên" required size="39%"><br>
+            <input type="text" id="Email" placeholder="Số điện thoại và Email" required size="84%"><br>
+            <input type="password" id="PassWord" placeholder="Mật Khẩu" required size="84%"><br>
+            <input type="password" id="XacNhanMatKhau" placeholder="Xác Nhận Mật Khẩu" required size="84%"><br>
         </div><br>
         <div>
             <label for="">Ngày sinh &reg;</label><br>
-            <input type="number" id="date" min="1" max="31" placeholder="Ngày sinh" size="20px">
-            <input type="number" id="date" min="1" max="12" placeholder="Tháng sinh" size="20px">
-            <input type="number" id="date" min="1924" max="2024" placeholder="Năm sinh"size="20px">
+            <input type="number" id="date" min="1" max="31" placeholder="Ngày sinh" size="20px" style="width: 30%;">
+            <input type="number" id="date" min="1" max="12" placeholder="Tháng sinh" size="20px" style="width: 30%;">
+            <input type="number" id="date" min="1924" max="2024" placeholder="Năm sinh"size="20px" style="width: 30%;">
         </div><br>
-        <div>
-            <label for="gender"> Giới tính &reg;</label><br>
-            <label><input type="radio" name="gender" value="male">Nam</label>
-            <label><input type="radio" name="gender" value="female">Nữ</label>
-            <label><input type="radio" name="gender" value="other">Tùy chỉnh</label>
-        </div><br>
-        <p style="font-size: 80%;">Những người dùng dịch vụ của chúng tôi có thể đã tải thông tin liên hệ của bạn lên Facebook.<a href="#">Tìm hiểu thêm </a></p>
+        <p style="font-size: 80%;">Những người dùng dịch vụ của chúng tôi có thể đã tải thông tin liên hệ của bạn lên iQIYI.<a href="#">Tìm hiểu thêm </a></p>
         <p style="font-size: 80%;">Bằng cách nhấp vào Đăng ký, bạn đồng ý với <a href="#">Điều khoản</a>, <a href="#">Chính sách quyền riêng tư</a> và <a href="#">Chính sách cookie</a> của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ lúc nào </p>
         <div style="text-align: center;">
-            <input id="submitLogin" type="button" style=" background-color: #009E60; color: white;" value="Đăng ký" onclick="CheckThongTin()">
+            <input id="submitLogin" type="submit" style=" background-color: #009E60; color: white; width: 100px;" value="Đăng ký" onclick="CheckThongTin(event)">
         </div>
         <a href="#" style="color: #009E60;">Bạn đã có tài khoản ư?</a>
-</div> 
+    </div>
 <header id="header">
     <div class="header-left">
         <nav>
             <ul>
-                <a style="margin-left: 40px;" href="dexuat.html"><img border="0" alf="logoiQIYI" src="../img/IQ.png" width="90px" height="30px"></a>
+                <a style="margin-left: 40px;" href="Dexuat.html"><img border="0" alf="logoiQIYI" src="../img/IQ.png" width="90px" height="30px"></a>
                 <li><a href="../HTML/Dexuat.html" >Đề xuất</a></li>
                 <li><a href="../HTML/Phimbo.html">Phim bộ</a></li>
                 <li><a href="../HTML/Phimhan.html">Phim hàn</a></li>
                 <li><a href="../HTML/PhimLe.html">Phim lẻ</a></li>
-                <li><a href="../HTML/Hoathinh.html" class="highlight">Hoạt hình</a></li>
+                <li><a href="../HTML/Hoathinh.html">Hoạt hình</a></li>
             </ul>
         </nav>
     </div>
@@ -240,7 +233,7 @@
 </footer>
 <script src="../JS/Header.js"></script>
 <script src="../JS/Footer.js"></script>
-<script src="../JS/formdangky.js"></script>
+<script src="../JS/form.js"></script>
 <script src="../JS/BackTop.js"></script>
 </body>
 </html>
