@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iQIYI - Xem Phim Online</title>
+    <link rel="icon" type="image/x-icon" href="../img/logoIQIYI.ico">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../CSS/iQIYI.css">
+    <link rel="stylesheet" href="../CSS/form.css">
+    <link rel="stylesheet" href="../CSS/Header.css">
+    <link rel="stylesheet" href="../CSS/BackTop.css">
+</head>
+<body>
+    <div id="loginForm">
+        <h1><strong>Đăng ký</strong></h1>
+        <p>Nhanh chóng và dễ dàng.</p>
+        <hr>
+        <div>
+            <input type="text" id="Name" placeholder="username" required size="39%">
+            <input type="text" id="Hoten" placeholder="Tên" required size="39%"><br>
+            <input type="text" id="Email" placeholder="Số điện thoại và Email" required size="85%"><br>
+            <input type="password" id="PassWord" placeholder="Mật Khẩu" required size="85%"><br>
+            <input type="password" id="XacNhanMatKhau" placeholder="Xác Nhận Mật Khẩu" required size="85%"><br>
+        </div><br>
+        <div>
+            <label for="">Ngày sinh &reg;</label><br>
+            <input type="number" id="date" min="1" max="31" placeholder="Ngày sinh" size="20px" style="width: 30%;">
+            <input type="number" id="date" min="1" max="12" placeholder="Tháng sinh" size="20px" style="width: 30%;">
+            <input type="number" id="date" min="1924" max="2024" placeholder="Năm sinh"size="20px" style="width: 30%;">
+        </div><br>
+        <p style="font-size: 80%;">Những người dùng dịch vụ của chúng tôi có thể đã tải thông tin liên hệ của bạn lên iQIYI.<a href="#">Tìm hiểu thêm </a></p>
+        <p style="font-size: 80%;">Bằng cách nhấp vào Đăng ký, bạn đồng ý với <a href="#">Điều khoản</a>, <a href="#">Chính sách quyền riêng tư</a> và <a href="#">Chính sách cookie</a> của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ lúc nào </p>
+        <div style="text-align: center;">
+            <input id="submitLogin" type="submit" style=" background-color: #009E60; color: white; width: 100px;" value="Đăng ký" onclick="CheckThongTin(event)">
+        </div>
+        <a href="#" style="color: #009E60;">Bạn đã có tài khoản ư?</a>
+    </div>
+<header id="header">
+    <div class="header-left">
+        <nav>
+            <ul>
+                <a style="margin-left: 40px;" href="Dexuat.html"><img border="0" alf="logoiQIYI" src="../img/IQ.png" width="90px" height="30px"></a>
+                <li><a href="../HTML/Dexuat.html" class="highlight" >Đề xuất</a></li>
+                <li><a href="../HTML/Phimbo.html">Phim bộ</a></li>
+                <li><a href="../HTML/Phimhan.html">Phim hàn</a></li>
+                <li><a href="../HTML/PhimLe.html">Phim lẻ</a></li>
+                <li><a href="../HTML/Hoathinh.html">Hoạt hình</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header-right">
+        </div><div class="search"><input type="text" class="search-bar" placeholder="Tìm kiếm...">|&#x1F50D;</div>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="icon-links">
+            <div class="history">
+                <button class="history-button">Lịch sử xem</button>
+                <div class="popup-box">
+                    <img src="../img/box.png" class="popup-icon" /> 
+                    <p>Đăng nhập để quản lý lịch sử xem nội dung trên các thiết bị khác nhau.</p>
+                    <button class="login-button">Đăng nhập</button>
+                </div>
+            </div>
+           <div class="Language">
+                <button class="Language-button">Ngôn ngữ</button>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Tiếng Việt</a>
+                    <a href="#" class="dropdown-item">English</a>
+                    <a href="#" class="dropdown-item">日本語</a>
+                </div>
+           </div>
+           <div class="my">
+            <button class="my-button">Của tôi</button>
+                <div class="my-box">
+                    <p>Đăng nhập để theo dõi các nội dung mới nhất.</p>
+                    <button class="login-button">Đăng nhập</button>
+                </div>
+            </div>
+        </div>
+        <div class="app">
+            <button class="app-button">Ứng dụng</button>
+            <div class="app-box">
+                <p>Khách hàng sử dụng thiết bị đầu cuối Windows, tận hưởng trải nghiệm hình ảnh âm thanh tốt hơn</p>
+                <button id="experience-button">Lập tức trải nghiệm</button> 
+                <hr>
+                <p>Quét mã QR tải ứng dụng về điện thoại di động, nhận VIP miễn phí</p>
+                <img src="../img/qr code.png" alt="QR code" class="qr-code">
+                <p>Chỉ dành cho khách hàng mới trên điện thoại di động nhé</p>
+            </div>
+        </div>
+
+        <div class="vip">
+            <button class="vip-button">VIP</button>
+            <div class="vip-box">
+                <p class="vip-title">Quyền lợi thành viên</p>
+                <div class="vip-benefits">
+                    <div class="benefit-item">
+                        <img src="../img/ho tro da nen tang.png" alt="Hỗ Trợ Đa Nền Tảng">
+                        <span>Hỗ Trợ Đa Nền Tảng</span>
+                    </div>
+                    <div class="benefit-item">
+                        <img src="../img/1080p.png" alt="1080P">
+                        <span>1080P</span>
+                    </div>
+                    <div class="benefit-item">
+                        <img src="../img/noi dung doc quyen.png" alt="Nội Dung Độc Quyền">
+                        <span>Nội Dung Độc Quyền</span>
+                    </div>
+                    <div class="benefit-item">
+                        <img src="../img/khong quang cao.png" alt="Không Quảng Cáo">
+                        <span>Không Quảng Cáo</span>
+                    </div>
+                </div>
+                <button class="sale-button">Sale 11.11, VIP Năm Giảm 50%</button>
+                <p class="code-redeem">Mã đổi quà</p>
+            </div>
+        </div>
+
+    </div>
+</header>
+<div class="S-mota">
+    <h1>Xem nội dung đặc sắc châu Á, trải nghiệm xem phim</h1>
+    <h1>cực đỉnh chỉ có ở iQIYI</h1>
+    <p>Thêm nhiều video chính hãng độc quyền chất lượng cao, phụ</p>
+    <p>đề đa ngôn ngữ hơn nữa giúp bạn xem phim không biên giới!</p>
+</div>
+<div class="cach"></div>
+<div class="mota1">
+    <div>
+        <h2>Kho nội dung tùy ý lựa chọn</h2>
+        <p>Xem trước nội dung đang hot, nội dung nguyên bản</p>
+        <p>iQIYI tùy bạn chọn lựa. Nội dung bạn yêu thích đều có</p>
+        <p>ở đây!</p>
+    </div>
+    <img src="../img/mota1.png">
+</div>
+<div class="cach"></div>
+<div class="mota1">
+    <img src="../img/mota2.png">
+    <div>
+        <h2>Trải nghiệm xem như hòa mình vào</h2>
+        <h2>cảnh quay</h2>
+        <p>Hiệu ứng âm thanh vòng Dolby, hình ảnh HD chất</p>
+        <p>lượng cao 4K/1080P cho bạn cảm giác như đang</p>
+        <p>trong rạp chiếu phim! Còn có phụ đề đa ngôn ngữ</p>
+        <p>giúp bạn hiểu thêm nhiều nội dung châu Á!</p>
+    </div>
+</div>
+<div class="cach"></div>
+<div class="mota1">
+    <div>
+        <h2>Tải về nội dung đặc sắc xem ngoại</h2>
+        <h2>tuyến</h2>
+        <p>Dễ dàng lưu lại phim bạn thích, tận hưởng nội dung</p>
+        <p>đặc sắc mọi lúc mọi nơi !</p>
+    </div>
+    <img src="../img/mota3.png">
+</div>
+<div class="cach"></div>
+<div class="mota2">
+    <div>
+        <h2>Trải nghiệm iQIYI trên nhiều thiết bị</h2>
+        <p>Điện thoại, tivi, máy vi tính, không có chi phí phát sinh, kho nội dung iQIYI cho bạn xem trên nhiều thiết bị!</p>
+    </div>
+</div>
+<div class="mota1">
+    <img style="width: 600px; height: 500px;" src="../img/mota4.png">
+    <div>
+        <h1 style="color: #009E60;" >Điện thoại</h1>
+        <p>Xem trên thiết bị di động, giao diện đơn giản chưa từng</p>
+        <p>thấy giúp bạn nhanh chóng tìm được nội dung muốn</p>
+        <p>xem</p>
+    </div>
+</div>
+<hr>
+<div class="mota1">
+    <div>
+        <h1 style="color: #009E60;" >TIVI</h1>
+        <p>Trải nghiệm xem trên màn hình lớn, hình ảnh HD chất</p>
+        <p>lượng cao và hiệu ứng âm thanh cực đỉnh đưa bạn vào</p>
+        <p>khung cảnh như thật</p>
+    </div>
+    <img src="../img/mota5.png">
+</div>
+<hr>
+<div class="mota1">
+    <img style="width: 600px; height: 500px;" src="../img/mota6.png">
+    <div>
+        <h1 style="color: #009E60;" >Máy vi tính</h1>
+        <p>Xem video trên trang web, lúc rảnh rỗi tùy ý mở xem</p>
+        <p>video đặc sắc</p>
+    </div>
+</div>
+<div>
+    <a class="backtop" id="backtop" href="#">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+<script src="../JS/Header.js"></script>
+<script src="../JS/form.js"></script>
+<script src="../JS/BackTop.js"></script>
+</body>
+</html>
