@@ -1,0 +1,46 @@
+.S-mota{
+    background-image: url('../img/footerS.jpg'); 
+    width: 100%;
+    height: 729px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.S-mota h1{
+    font-size: 40px;
+    color: white;
+}
+.S-mota p{
+    font-size: 25px;
+    color: white;
+}
+.cach{
+    background-color: black;
+    height: 10px;
+}
+.mota1{
+    color: white;
+    display: flex;
+}
+.mota1 div{
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mota1 img{
+    width: 400px;
+    height: 320px;
+}
+.mota2{
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;   
+    height: 200px;
+}
