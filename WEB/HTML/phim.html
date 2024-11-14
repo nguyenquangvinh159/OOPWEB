@@ -8,17 +8,16 @@
 
     
     <link rel="stylesheet" href="../CSS/iQIYI.css">
-        <link rel="stylesheet" href="../CSS/form.css">
+    <link rel="stylesheet" href="../CSS/form.css">
     <link rel="stylesheet" href="../CSS/Header.css">
     <link rel="stylesheet" href="../CSS/BackTop.css">
     <link rel="stylesheet" href="../CSS/Footer.css">
     <link rel="stylesheet" href="../CSS/phim.css">
-    <!-- <link rel="stylesheet" href="../CSS/tapphim.css"> -->
-
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../CSS/Dieu Huong.css">
 </head>
 <body>
-   <div id="loginForm">
+    <div id="loginForm">
         <h1><strong>Đăng ký</strong></h1>
         <p>Nhanh chóng và dễ dàng.</p>
         <hr>
@@ -41,17 +40,17 @@
             <input id="submitLogin" type="submit" style=" background-color: #009E60; color: white; width: 100px;" value="Đăng ký" onclick="CheckThongTin(event)">
         </div>
         <a href="#" style="color: #009E60;">Bạn đã có tài khoản ư?</a>
-    </div> 
+    </div>
 <header id="header">
     <div class="header-left">
         <nav>
             <ul>
-                <a style="margin-left: 40px;" href="dexuat.html"><img border="0" alf="logoiQIYI" src="../img/IQ.png" width="90px" height="30px"></a>
-                <li><a href="../HTML/Dexuat.html" >Đề xuất</a></li>
+                <a style="margin-left: 40px;" href="Dexuat.html"><img border="0" alf="logoiQIYI" src="../img/IQ.png" width="90px" height="30px"></a>
+                <li><a href="../HTML/Dexuat.html" class="highlight" >Đề xuất</a></li>
                 <li><a href="../HTML/Phimbo.html">Phim bộ</a></li>
                 <li><a href="../HTML/Phimhan.html">Phim hàn</a></li>
                 <li><a href="../HTML/PhimLe.html">Phim lẻ</a></li>
-                <li><a href="../HTML/Hoathinh.html" class="highlight">Hoạt hình</a></li>
+                <li><a href="../HTML/Hoathinh.html">Hoạt hình</a></li>
             </ul>
         </nav>
     </div>
@@ -64,7 +63,7 @@
                 <div class="popup-box">
                     <img src="../img/box.png" class="popup-icon" /> 
                     <p>Đăng nhập để quản lý lịch sử xem nội dung trên các thiết bị khác nhau.</p>
-                    <button id="login-button">Đăng nhập</button>
+                    <button class="login-button">Đăng nhập</button>
                 </div>
             </div>
            <div class="Language">
@@ -79,12 +78,12 @@
             <button class="my-button">Của tôi</button>
                 <div class="my-box">
                     <p>Đăng nhập để theo dõi các nội dung mới nhất.</p>
-                    <button id="login-button">Đăng nhập</button>
+                    <button class="login-button">Đăng nhập</button>
                 </div>
             </div>
         </div>
         <div class="app">
-                <button class="app-button" style="  background-color: #e3b200 ;">Ứng dụng</button>
+            <button class="app-button" style=" background-color: #e3b200;">Ứng dụng</button>
             <div class="app-box">
                 <p>Khách hàng sử dụng thiết bị đầu cuối Windows, tận hưởng trải nghiệm hình ảnh âm thanh tốt hơn</p>
                 <button id="experience-button">Lập tức trải nghiệm</button> 
@@ -124,7 +123,6 @@
 
     </div>
 </header>
-
     <div class="container">
         <div class="info-section">
             <h1>Bảy Viên Ngọc Rồng Siêu Cấp</h1>
@@ -200,46 +198,53 @@
     <div style="height: 35px;"></div>
 <!-- Footer bắt đầu -->
 <footer id="myFooter">
-<div class="footer-content">
-  <div class="footer-column">
-    <h3>Giới thiệu về chúng tôi</h3>
-    <ul>
-      <li><a href="https://www.iq.com/aboutus">Thông tin công ty</a></li>
-      <li><a href="https://www.iq.com/services-rights">Giới thiệu dịch vụ sản phẩm</a></li>
-      <li><a href="https://www.iq.com/download?lang=vi_vn">Cách xem</a></li>
-      <li><a href="https://ir.iqiyi.com/investor-overview?c=254698&p=irol-irhome">Quan hệ nhà đầu tư</a></li>
-    </ul>
-  </div>
-  <div class="footer-column">
-    <h3>Hợp tác</h3>
-    <ul>
-      <li><a href="https://www.iq.com/intl-common/partnerShip.html">Đăng quảng cáo</a></li>
-      <li><a href="https://www.iq.com/intl-common/partnerShip.html">Quan hệ kinh doanh</a></li>
-      <li><a href="https://www.iq.com/intl-common/preinstall.html">Hợp tác cài đặt trước</a></li>
-    </ul>
-  </div>
-  <div class="footer-column">
-    <h3>Hỗ trợ và giúp đỡ</h3>
-    <ul>
-      <li><a href="https://www.iq.com/intl-common/feedback.html?mod=vn&lang=vi_vn&entranceId=PCW/H5_navigation&agentType=426&ptid=01010031010021000000">Phản ánh ý kiến</a></li>
-      <li><a href="https://security.iqiyi.com/#oversea">Trung tâm phản hồi bảo mật</a></li>
-      <li><a href="https://intl-help.iq.com/m/?mod=vn&lang=vi_vn&entry=pc&entranceId=PCW/H5_navigation&agentType=426&ptid=01010031010021000000#_qy_scrollTop=0">Câu hỏi thường gặp</a></li>
-    </ul>
-  </div>
-  <div class="footer-column">
-    <h3>Điều khoản dịch vụ</h3>
-    <ul>
-      <li><a href="https://www.iq.com/intl-common/international-privacyagreement.html?lang=vi_vn">Điều khoản quyền riêng tư</a></li>
-      <li><a href="https://www.iq.com/intl-common/international-useragreement.html?lang=vi_vn">Điều khoản sử dụng</a></li>
-    </ul>
-  </div>
-</div>
-</footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Giới thiệu về chúng tôi</h3>
+        <ul>
+          <li><a href="#">Thông tin công ty</a></li>
+          <li><a href="#">Giới thiệu dịch vụ sản phẩm</a></li>
+          <li><a href="#">Cách xem</a></li>
+          <li><a href="#">Quan hệ nhà đầu tư</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Hợp tác</h3>
+        <ul>
+          <li><a href="#">Đăng quảng cáo</a></li>
+          <li><a href="#">Quan hệ kinh doanh</a></li>
+          <li><a href="#">Hợp tác cài đặt trước</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Hỗ trợ và giúp đỡ</h3>
+        <ul>
+          <li><a href="#">Phản ánh ý kiến</a></li>
+          <li><a href="#">Trung tâm phản hồi bảo mật</a></li>
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Điều khoản dịch vụ</h3>
+        <ul>
+          <li><a href="#">Điều khoản quyền riêng tư</a></li>
+          <li><a href="#">Điều khoản sử dụng</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 <script src="../JS/Header.js"></script>
 <script src="../JS/Footer.js"></script>
 <script src="../JS/form.js"></script>
 <script src="../JS/BackTop.js"></script>
 <script src="../JS/hien thong tin.js"></script>
+<script src="../JS/formdangky.js"></script>
+
+
+<script src="../JS/Slide.js"></script>
+<script src="../JS/List.js"></script>
+<script src="../JS/DieuHuong.js"></script>
+
 
 </body>
 </html>
