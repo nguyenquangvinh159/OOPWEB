@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iQIYI - Xem Phim Online</title>
+    <link rel="icon" type="image/x-icon" href="../img/logoIQIYI.ico">
+
+    
+    <link rel="stylesheet" href="../CSS/iQIYI.css">
+    <link rel="stylesheet" href="../CSS/Header.css">
+    <link rel="stylesheet" href="../CSS/BackTop.css">
+    <link rel="stylesheet" href="../CSS/Footer.css">
+    <link rel="stylesheet" href="../CSS/phim.css">
+    <link rel="stylesheet" href="../CSS/tapphim.css">
+
+
+</head>
+<body>
+   <div id="loginForm">
+        <h1><strong>Đăng ký</strong></h1>
+        <p>Nhanh chóng và dễ dàng.</p>
+        <hr>
+        <div>
+           <input type="text" id="Name" placeholder="Họ" required size="45%">
+            <input type="text" id="Hoten" placeholder="Tên" required size="45%"><br>
+            <input type="text" id="Email" placeholder="Số điện thoại và Email" required size="95%"><br>
+            <input type="password" id="PassWord" placeholder="Mật Khẩu" required size="95%"><br>
+            <input type="password" id="XacNhanMatKhau" placeholder="Xác Nhận Mật Khẩu" required size="95%"><br>
+        </div><br>
+        <div>
+            <label for="">Ngày sinh &reg;</label><br>
+            <input type="number" id="date" min="1" max="31" placeholder="Ngày sinh" size="20px">
+            <input type="number" id="date" min="1" max="12" placeholder="Tháng sinh" size="20px">
+            <input type="number" id="date" min="1924" max="2024" placeholder="Năm sinh"size="20px">
+        </div><br>
+        <div>
+            <label for="gender"> Giới tính &reg;</label><br>
+            <label><input type="radio" name="gender" value="male">Nam</label>
+            <label><input type="radio" name="gender" value="female">Nữ</label>
+            <label><input type="radio" name="gender" value="other">Tùy chỉnh</label>
+        </div><br>
+        <p style="font-size: 80%;">Những người dùng dịch vụ của chúng tôi có thể đã tải thông tin liên hệ của bạn lên Facebook.<a href="#">Tìm hiểu thêm </a></p>
+        <p style="font-size: 80%;">Bằng cách nhấp vào Đăng ký, bạn đồng ý với <a href="#">Điều khoản</a>, <a href="#">Chính sách quyền riêng tư</a> và <a href="#">Chính sách cookie</a> của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ lúc nào </p>
+        <div style="text-align: center;">
+            <input id="submitLogin" type="button" style=" background-color: #009E60; color: white;" value="Đăng ký" onclick="CheckThongTin()">
+        </div>
+        <a href="#" style="color: #009E60;">Bạn đã có tài khoản ư?</a>
+</div> 
+<header id="header">
+    <div class="header-left">
+        <nav>
+            <ul>
+                <a style="margin-left: 40px;" href="dexuat.html"><img border="0" alf="logoiQIYI" src="../img/IQ.png" width="90px" height="30px"></a>
+                <li><a href="../HTML/Dexuat.html" >Đề xuất</a></li>
+                <li><a href="../HTML/Phimbo.html">Phim bộ</a></li>
+                <li><a href="../HTML/Phimhan.html">Phim hàn</a></li>
+                <li><a href="../HTML/PhimLe.html">Phim lẻ</a></li>
+                <li><a href="../HTML/Hoathinh.html" class="highlight">Hoạt hình</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header-right">
+        </div><div class="search"><input type="text" class="search-bar" placeholder="Tìm kiếm...">|&#x1F50D;</div>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="icon-links">
+            <div class="history">
+                <button class="history-button">Lịch sử xem</button>
+                <div class="popup-box">
+                    <img src="../img/box.png" class="popup-icon" /> 
+                    <p>Đăng nhập để quản lý lịch sử xem nội dung trên các thiết bị khác nhau.</p>
+                    <button id="login-button">Đăng nhập</button>
+                </div>
+            </div>
+           <div class="Language">
+                <button class="Language-button">Ngôn ngữ</button>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Tiếng Việt</a>
+                    <a href="#" class="dropdown-item">English</a>
+                    <a href="#" class="dropdown-item">日本語</a>
+                </div>
+           </div>
+           <div class="my">
+            <button class="my-button">Của tôi</button>
+                <div class="my-box">
+                    <p>Đăng nhập để theo dõi các nội dung mới nhất.</p>
+                    <button id="login-button">Đăng nhập</button>
+                </div>
+            </div>
+        </div>
+        <div class="app">
+            <button class="app-button">Ứng dụng</button>
+            <div class="app-box">
+                <p>Khách hàng sử dụng thiết bị đầu cuối Windows, tận hưởng trải nghiệm hình ảnh âm thanh tốt hơn</p>
+                <button id="experience-button">Lập tức trải nghiệm</button> 
+                <hr>
+                <p>Quét mã QR tải ứng dụng về điện thoại di động, nhận VIP miễn phí</p>
+                <img src="../img/qr code.png" alt="QR code" class="qr-code">
+                <p>Chỉ dành cho khách hàng mới trên điện thoại di động nhé</p>
+            </div>
+        </div>
+
+        <div class="vip">
+            <button class="vip-button">VIP</button>
+            <div class="vip-box">
+                <p class="vip-title">Quyền lợi thành viên</p>
+                <div class="vip-benefits">
+                    <div class="benefit-item">
+                        <img src="../img/ho tro da nen tang.png" alt="Hỗ Trợ Đa Nền Tảng">
+                        <span>Hỗ Trợ Đa Nền Tảng</span>
+                    </div>
+                    <div class="benefit-item">
+                        <img src="../img/1080p.png" alt="1080P">
+                        <span>1080P</span>
+                    </div>
+                    <div class="benefit-item">
+                        <img src="../img/noi dung doc quyen.png" alt="Nội Dung Độc Quyền">
+                        <span>Nội Dung Độc Quyền</span>
+                    </div>
+                    <div class="benefit-item">
+                        <img src="../img/khong quang cao.png" alt="Không Quảng Cáo">
+                        <span>Không Quảng Cáo</span>
+                    </div>
+                </div>
+                <button class="sale-button">Sale 11.11, VIP Năm Giảm 50%</button>
+                <p class="code-redeem">Mã đổi quà</p>
+            </div>
+        </div>
+
+    </div>
+</header>
+<div class="body">
+    <div class="container">
+        <div class="info-section">
+            <h1>Bảy Viên Ngọc Rồng Siêu Cấp</h1>
+            <div class="rating-section">
+                <span class="top-rating">TOP 6</span>
+                <span class="category">Danh sách hit phim hoạt hình</span>
+            </div>
+            <p class="score"><span class="star">★</span> 9.4</p>
+            <p class="details">T13 | 2015 | 131 tập</p>
+            <div class="tags">
+                <span>Nhật Bản</span>
+                <span>Thiếu niên</span>
+                <span>Tiếng Nhật</span>
+                <span>Viễn Tưởng</span>
+                <span>Nhiệt Huyết</span>
+            </div>
+            <p class="description">
+                Giới thiệu: Sau khi kết thúc trận chiến khốc liệt với Majin Buu, trái đất trở lại hòa bình...
+                <button class="show-more">Hiển thị thêm ▼</button>
+            </p>
+            <div class="action-buttons">
+                <button class="play-button">Chiếu phát</button>
+                <button class="share-button">Chia sẻ</button>
+                <button class="app-button">APP</button>
+                <button class="collection-button">Sưu tập</button>
+            </div>
+        </div>
+        <div class="image-section">
+            <img src="/DragonBallSupper.jpg" alt="Bảy Viên Ngọc Rồng Siêu Cấp">
+        </div>
+    </div>
+
+    <br>
+    <div class="container1">
+        <h1>Danh Sách Tập Phim - Bảy Viên Ngọc Rồng Siêu Cấp</h1>
+        <div class="menu">
+            <label for="episode-select">Chọn tập:</label>
+            <select id="episode-select">
+                <option value="1-24">Chọn tập 1-24</option>
+                <option value="25-48">Chọn tập 25-48</option>
+                <option value="49-72">Chọn tập 49-72</option>
+                <option value="73-96">Chọn tập 73-96</option>
+            </select>
+        </div>
+        <div class="episodes">
+            <div class="episode">
+                <img src="https://via.placeholder.com/200x120" alt="Tập 1">
+                <div class="episode-title">Bảy Viên Ngọc Rồng Siêu Cấp Tập 1</div>
+            </div>
+            <div class="episode">
+                <img src="https://via.placeholder.com/200x120" alt="Tập 2">
+                <div class="episode-title">Bảy Viên Ngọc Rồng Siêu Cấp Tập 2</div>
+            </div>
+            <div class="episode">
+                <img src="https://via.placeholder.com/200x120" alt="Tập 3">
+                <div class="episode-title">Bảy Viên Ngọc Rồng Siêu Cấp Tập 3</div>
+            </div>
+            <div class="episode">
+                <img src="https://via.placeholder.com/200x120" alt="Tập 4">
+                <div class="episode-title">Bảy Viên Ngọc Rồng Siêu Cấp Tập 4</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <a class="backtop" id="backtop" href="#">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+<div style="height: 35px;"></div>
+<!-- Footer bắt đầu -->
+<footer id="myFooter">
+<div class="footer-content">
+  <div class="footer-column">
+    <h3>Giới thiệu về chúng tôi</h3>
+    <ul>
+      <li><a href="https://www.iq.com/aboutus">Thông tin công ty</a></li>
+      <li><a href="https://www.iq.com/services-rights">Giới thiệu dịch vụ sản phẩm</a></li>
+      <li><a href="https://www.iq.com/download?lang=vi_vn">Cách xem</a></li>
+      <li><a href="https://ir.iqiyi.com/investor-overview?c=254698&p=irol-irhome">Quan hệ nhà đầu tư</a></li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <h3>Hợp tác</h3>
+    <ul>
+      <li><a href="https://www.iq.com/intl-common/partnerShip.html">Đăng quảng cáo</a></li>
+      <li><a href="https://www.iq.com/intl-common/partnerShip.html">Quan hệ kinh doanh</a></li>
+      <li><a href="https://www.iq.com/intl-common/preinstall.html">Hợp tác cài đặt trước</a></li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <h3>Hỗ trợ và giúp đỡ</h3>
+    <ul>
+      <li><a href="https://www.iq.com/intl-common/feedback.html?mod=vn&lang=vi_vn&entranceId=PCW/H5_navigation&agentType=426&ptid=01010031010021000000">Phản ánh ý kiến</a></li>
+      <li><a href="https://security.iqiyi.com/#oversea">Trung tâm phản hồi bảo mật</a></li>
+      <li><a href="https://intl-help.iq.com/m/?mod=vn&lang=vi_vn&entry=pc&entranceId=PCW/H5_navigation&agentType=426&ptid=01010031010021000000#_qy_scrollTop=0">Câu hỏi thường gặp</a></li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <h3>Điều khoản dịch vụ</h3>
+    <ul>
+      <li><a href="https://www.iq.com/intl-common/international-privacyagreement.html?lang=vi_vn">Điều khoản quyền riêng tư</a></li>
+      <li><a href="https://www.iq.com/intl-common/international-useragreement.html?lang=vi_vn">Điều khoản sử dụng</a></li>
+    </ul>
+  </div>
+</div>
+</footer>
+<script src="../JS/Header.js"></script>
+<script src="../JS/Footer.js"></script>
+<script src="../JS/formdangky.js"></script>
+<script src="../JS/BackTop.js"></script>
+</body>
+</html>

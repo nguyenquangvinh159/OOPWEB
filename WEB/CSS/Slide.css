@@ -4,7 +4,6 @@
     height: 900px;
     overflow: hidden;
     cursor: pointer;
-    margin: auto;
 }
 .slides {
     display: flex;
@@ -17,7 +16,7 @@
     flex-shrink: 0;
 }
 .slide img {
-    width: 110%;
+    width: 95%;
     height: 100%;
     object-fit: cover;
 }

@@ -1,0 +1,55 @@
+.container1 {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 20px;
+    overflow: hidden; /* Đảm bảo container không có cuộn dọc không mong muốn */
+}
+
+.container1 h1 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Ẩn menu chọn tập nếu không cần */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.episodes {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    padding-bottom: 10px;
+    scroll-behavior: smooth; /* Cuộn mượt mà */
+}
+
+.episode {
+    min-width: 200px; /* Đảm bảo chiều rộng cố định cho mỗi tập để dễ dàng cuộn ngang */
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    text-align: center;
+    flex: 0 0 auto; /* Ngăn không cho các tập phim co lại */
+}
+
+.episode:hover {
+    transform: scale(1.05);
+}
+
+.episode img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #333;
+}
+
+.episode-title {
+    padding: 10px;
+    font-size: 1em;
+    color: #fff;
+}

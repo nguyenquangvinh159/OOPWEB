@@ -1,0 +1,105 @@
+
+
+.body {
+    background-color: #121212;
+    color: #ffffff;
+} 
+
+.container {
+    display: flex;
+    max-width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.info-section {
+    padding-top: 60px;
+    padding-right: 20px;
+}
+
+.info-section h1 {
+    z-index: 10;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.rating-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.top-rating {
+    background-color: #009E60;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.score {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.details {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tags span {
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+
+.description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.show-more {
+    color: #009E60;
+    cursor: pointer;
+    background-color:#121212 ;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.play-button {
+    background-color: #009E60;
+    color: #fff;
+}
+
+.share-button, .app-button, .collection-button {
+    background-color: #333;
+    color: #fff;
+}
+
+.image-section {
+    flex: 1;
+    position: relative;
+}
+
+.image-section img {
+    width: 100%;
+    /* border-radius: 10px; */
+}

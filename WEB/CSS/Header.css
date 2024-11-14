@@ -95,7 +95,7 @@ nav ul li a.highlight {
     height: auto;
 }
 
-.login-button {
+#login-button {
     background-color: #4CAF50;
     color: white;
     padding: 8px 16px;
@@ -107,7 +107,7 @@ nav ul li a.highlight {
     font-size: 15px;
 }
 
-.login-button:hover {
+#login-button:hover {
     background-color: #45a049;
 }
 
@@ -151,7 +151,6 @@ nav ul li a.highlight {
     text-decoration: none;
     font-size: 14px;
     text-align: center;
-    width: 100%;
 }
 
 .dropdown-item:hover {
@@ -231,12 +230,150 @@ nav ul li a.highlight {
     cursor: pointer;
     margin-left: 10px;
 }
-
 .app-button {
     background-color: #ff8c00;
+}
+
+/* Định dạng chung */
+.app {
+    position: relative;
+}
+
+.app-box {
+    position: absolute;
+    top: 100%; 
+    left: -90%;
+    background-color: #333;
+    color: #fff;
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    display: none;
+    padding: 20px;
+    z-index: 10;
+    align-items: center;
+}
+.app:hover .app-box {
+    display: block;
+}
+.app-box p{
+    font-size: 13px;
+}
+.qr-code {
+    width: 50%;
+    margin-top: 10px;
+}
+
+button#experience-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #00cc66;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button#experience-button:hover {
+    background-color: #007d46;
 }
 
 .vip-button {
     margin-right: 40px;
     background-color: #e3b200;
+}
+
+.vip {
+    position: relative;
+    display: inline-block;
+}
+
+.vip-box {
+    display: none;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-100%);
+}
+.vip-title{
+    cursor: pointer;
+}
+.vip-title:hover{
+    color: #E89A60;
+}
+.vip:hover .vip-box {
+    display: block;
+}
+
+.vip-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.vip-benefits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Chia thành 2 cột */
+    gap: 10px; /* Khoảng cách giữa các mục */
+    margin-bottom: 10px;
+}
+
+.benefit-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+.benefit-item:hover {
+    background-color: #333; /* Thay đổi màu nền khi hover */
+    transform: scale(1.05); /* Tăng kích thước nhẹ để tạo hiệu ứng nổi bật */
+    color: #fff; /* Đổi màu chữ cho dễ nhìn hơn */
+}
+.benefit-item img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.sale-button {
+    background-color: #E89A60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.code-redeem {
+    font-size: 12px;
+    text-align: center;
+    color: #ccc;
+    cursor: pointer;
+}
+.code-redeem:hover{
+    color: #E89A60;
+}
+#loginForm {
+    display: none;
+    position: absolute; 
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 20; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
 }

@@ -27,7 +27,7 @@ section{
 .movie-list::-webkit-scrollbar {
     display: none; /*ẩn trên chrome, coc coc*/
 }
-.movie-list-china {
+.movie-list {
     display: flex;
     justify-content: flex-start;
     flex-wrap: nowrap;
